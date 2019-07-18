@@ -1,0 +1,2825 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head 
+profile="http://gmpg.org/xfn/11">
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="distribution" content="global">
+<meta name="robots" content="follow, all">
+<meta name="language" content="en">
+
+<title>Installing LAMP on Ubuntu 10.04 and 10.10 (Lucid Lynx, Maverick 
+Meerkat) | Tux Tweaks</title>
+<meta name="generator" content="WordPress 3.3.1">
+<!-- leave this for stats -->
+
+<link rel="SHORTCUT ICON" 
+href="http://tuxtweaks.com/wp-content/themes/tuxtweaks/images/favicon4.ico">
+<link rel="stylesheet" 
+href="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/style.css"
+ type="text/css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" 
+href="http://tuxtweaks.com/feed/">
+<link rel="alternate" type="text/xml" title="RSS .92" 
+href="http://tuxtweaks.com/feed/rss/">
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" 
+href="http://tuxtweaks.com/feed/atom/">
+<link rel="pingback" href="http://tuxtweaks.com/xmlrpc.php">
+	<link rel="archives" title="January 2012" 
+href="http://tuxtweaks.com/2012/01/">
+	<link rel="archives" title="December 2011" 
+href="http://tuxtweaks.com/2011/12/">
+	<link rel="archives" title="November 2011" 
+href="http://tuxtweaks.com/2011/11/">
+	<link rel="archives" title="October 2011" 
+href="http://tuxtweaks.com/2011/10/">
+	<link rel="archives" title="September 2011" 
+href="http://tuxtweaks.com/2011/09/">
+	<link rel="archives" title="August 2011" 
+href="http://tuxtweaks.com/2011/08/">
+	<link rel="archives" title="July 2011" 
+href="http://tuxtweaks.com/2011/07/">
+	<link rel="archives" title="June 2011" 
+href="http://tuxtweaks.com/2011/06/">
+	<link rel="archives" title="May 2011" 
+href="http://tuxtweaks.com/2011/05/">
+	<link rel="archives" title="April 2011" 
+href="http://tuxtweaks.com/2011/04/">
+	<link rel="archives" title="March 2011" 
+href="http://tuxtweaks.com/2011/03/">
+	<link rel="archives" title="February 2011" 
+href="http://tuxtweaks.com/2011/02/">
+	<link rel="archives" title="January 2011" 
+href="http://tuxtweaks.com/2011/01/">
+	<link rel="archives" title="December 2010" 
+href="http://tuxtweaks.com/2010/12/">
+	<link rel="archives" title="November 2010" 
+href="http://tuxtweaks.com/2010/11/">
+	<link rel="archives" title="October 2010" 
+href="http://tuxtweaks.com/2010/10/">
+	<link rel="archives" title="September 2010" 
+href="http://tuxtweaks.com/2010/09/">
+	<link rel="archives" title="August 2010" 
+href="http://tuxtweaks.com/2010/08/">
+	<link rel="archives" title="July 2010" 
+href="http://tuxtweaks.com/2010/07/">
+	<link rel="archives" title="June 2010" 
+href="http://tuxtweaks.com/2010/06/">
+	<link rel="archives" title="May 2010" 
+href="http://tuxtweaks.com/2010/05/">
+	<link rel="archives" title="April 2010" 
+href="http://tuxtweaks.com/2010/04/">
+	<link rel="archives" title="March 2010" 
+href="http://tuxtweaks.com/2010/03/">
+	<link rel="archives" title="February 2010" 
+href="http://tuxtweaks.com/2010/02/">
+	<link rel="archives" title="January 2010" 
+href="http://tuxtweaks.com/2010/01/">
+	<link rel="archives" title="December 2009" 
+href="http://tuxtweaks.com/2009/12/">
+	<link rel="archives" title="November 2009" 
+href="http://tuxtweaks.com/2009/11/">
+	<link rel="archives" title="October 2009" 
+href="http://tuxtweaks.com/2009/10/">
+	<link rel="archives" title="September 2009" 
+href="http://tuxtweaks.com/2009/09/">
+	<link rel="archives" title="August 2009" 
+href="http://tuxtweaks.com/2009/08/">
+	<link rel="archives" title="July 2009" 
+href="http://tuxtweaks.com/2009/07/">
+	<link rel="archives" title="June 2009" 
+href="http://tuxtweaks.com/2009/06/">
+	<link rel="archives" title="May 2009" 
+href="http://tuxtweaks.com/2009/05/">
+	<link rel="archives" title="April 2009" 
+href="http://tuxtweaks.com/2009/04/">
+	<link rel="archives" title="March 2009" 
+href="http://tuxtweaks.com/2009/03/">
+	<link rel="archives" title="February 2009" 
+href="http://tuxtweaks.com/2009/02/">
+	<link rel="archives" title="January 2009" 
+href="http://tuxtweaks.com/2009/01/">
+	<link rel="archives" title="December 2008" 
+href="http://tuxtweaks.com/2008/12/">
+	<link rel="archives" title="November 2008" 
+href="http://tuxtweaks.com/2008/11/">
+	<link rel="archives" title="October 2008" 
+href="http://tuxtweaks.com/2008/10/">
+	<link rel="archives" title="September 2008" 
+href="http://tuxtweaks.com/2008/09/">
+	<link rel="archives" title="August 2008" 
+href="http://tuxtweaks.com/2008/08/">
+<!-- For threaded comments -->
+<link rel="alternate" type="application/rss+xml" title="Tux Tweaks » 
+Installing LAMP on Ubuntu 10.04 and 10.10 (Lucid Lynx, Maverick Meerkat)
+ Comments Feed" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/feed/">
+<link rel="stylesheet" id="contact-form-7-css" 
+href="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/styles.css"
+ type="text/css" media="all">
+<script type="text/javascript" async="" src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/quant.js"></script><script type="text/javascript" src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/prototype.js"></script>
+<script type="text/javascript" src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/wp-scriptaculous.js"></script>
+<script type="text/javascript" src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/effects.js"></script>
+<script type="text/javascript" src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/lightbox.js"></script>
+<script type="text/javascript" src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/comment-reply.js"></script>
+<script type="text/javascript" src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/jquery.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" 
+href="http://tuxtweaks.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" 
+href="http://tuxtweaks.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Use Nautilus Location Entry in Ubuntu Lucid" 
+href="http://tuxtweaks.com/2010/04/use-nautilus-location-entry-in-ubuntu-lucid/">
+<link rel="next" title="Add an Open Terminal Button to Nautilus" 
+href="http://tuxtweaks.com/2010/05/add-an-open-terminal-button-to-nautilus/">
+<meta name="generator" content="WordPress 3.3.1">
+<link rel="shortlink" href="http://wp.me/pB103-kF">
+
+<!-- All in One SEO Pack 1.6.13.8 by Michael Torbert of Semper Fi Web Design[406,500] -->
+<meta name="description" content="Install LAMP on Ubuntu with these 
+simple step by step instructions. Tested on Ubuntu 10.04 (Lucid Lynx) 
+and 10.10 (Maverick Meerkat).">
+<meta name="keywords" content="lamp, ubuntu, howto, install, linux, 
+apache, mysql, php">
+<link rel="canonical" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/">
+<!-- /all in one seo pack -->
+
+	<!-- begin lightbox scripts -->
+	<script type="text/javascript">
+    //<![CDATA[
+    document.write('<link rel="stylesheet" href="http://tuxtweaks.com/wp-content/plugins/lightbox-2/Themes/White/lightbox.css" type="text/css" media="screen" />');
+    //]]>
+    </script><link rel="stylesheet" 
+href="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/lightbox.css"
+ type="text/css" media="screen">
+	<!-- end lightbox scripts -->
+
+
+
+<link rel="alternate" type="application/rss+xml" title="Tux Tweaks RSS 
+Feed" href="http://tuxtweaks.com/feed/">
+<link rel="pingback" href="http://tuxtweaks.com/xmlrpc.php">
+
+<link rel="alternate" type="application/rss+xml" title="Tux Tweaks » 
+Installing LAMP on Ubuntu 10.04 and 10.10 (Lucid Lynx, Maverick Meerkat)
+ Comments Feed" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/feed/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" 
+href="http://tuxtweaks.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" 
+href="http://tuxtweaks.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Use Nautilus Location Entry in Ubuntu Lucid" 
+href="http://tuxtweaks.com/2010/04/use-nautilus-location-entry-in-ubuntu-lucid/">
+<link rel="next" title="Add an Open Terminal Button to Nautilus" 
+href="http://tuxtweaks.com/2010/05/add-an-open-terminal-button-to-nautilus/">
+<meta name="generator" content="WordPress 3.3.1">
+<link rel="shortlink" href="http://wp.me/pB103-kF">
+
+<!-- All in One SEO Pack 1.6.13.8 by Michael Torbert of Semper Fi Web Designob_start_detected [406,500] -->
+<meta name="description" content="Install LAMP on Ubuntu with these 
+simple step by step instructions. Tested on Ubuntu 10.04 (Lucid Lynx) 
+and 10.10 (Maverick Meerkat).">
+<meta name="keywords" content="lamp, ubuntu, howto, install, linux, 
+apache, mysql, php">
+<link rel="canonical" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/">
+<!-- /all in one seo pack -->
+
+	<!-- begin lightbox scripts -->
+	<script type="text/javascript">
+    //<![CDATA[
+    document.write('<link rel="stylesheet" href="http://tuxtweaks.com/wp-content/plugins/lightbox-2/Themes/White/lightbox.css" type="text/css" media="screen" />');
+    //]]>
+    </script><link rel="stylesheet" 
+href="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/lightbox.css"
+ type="text/css" media="screen">
+	<!-- end lightbox scripts -->
+
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+sfHover = function() {
+	if (!document.getElementsByTagName) return false;
+	var sfEls = document.getElementById("nav").getElementsByTagName("li");
+
+	for (var i=0; i<sfEls.length; i++) {
+		sfEls[i].onmouseover=function() {
+			this.className+=" sfhover";
+		}
+		sfEls[i].onmouseout=function() {
+			this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+		}
+	}
+
+}
+if (window.attachEvent) window.attachEvent("onload", sfHover);
+//--><!]]></script>
+
+<!-- Google Webmaster Tools Verification -->
+     <meta name="verify-v1" 
+content="/z0sw8KHnPyRFdtZTJe783xAQco1K32IK2XjXqMg6tg=">
+<!-- End Google Webmaster Tools -->
+<!-- Yahoo Site Explorer Authentication -->
+     <meta name="y_key" content="d5729f2bedb56037">
+<!-- End Yahoo Site Explorer -->
+</head><body>
+
+<div id="header">
+
+	<div class="headerleft">
+              <img style="float: left; margin: 3px;" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/Tux_TweakedL.png"
+ alt="Tux 2.0">
+                
+                <h1><a href="http://tuxtweaks.com/">Tux Tweaks</a></h1>
+                
+                Linux Tweaks, HowTo's and Reviews                
+	</div>
+	
+	<!--Replace the # below with the ad destination url.-->
+	<div class="headerright">
+	
+		<p><a href="http://feeds.feedburner.com/TuxTweaks" title="Subscribe to
+ my feed" rel="alternate" type="application/rss+xml"><img 
+style="vertical-align: middle;" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/rss.gif"
+ alt="Subscribe to Tux Tweaks"></a><a 
+href="http://feeds.feedburner.com/TuxTweaks" title="Subscribe to my 
+feed" rel="alternate" type="application/rss+xml">Subscribe</a><a 
+href="http://tuxtweaks.com/comments/feed/"><img style="vertical-align: 
+middle; margin-left: 10px;" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/rss.gif"
+ alt="Subscribe to Tux Tweaks"></a><a 
+href="http://tuxtweaks.com/comments/feed/">Comments</a></p>
+
+<!--	<p><a href="http://www.a2hosting.com/2247-5-1-81.html" target="_blank" rel="nofollow"><img src="http://tuxtweaks.com/wp-content/themes/tuxtweaks/images/hosting_ad.gif" alt="Shared Hosting" /></a></p> -->
+                
+	</div>
+
+</div>
+
+<div id="navbar">
+
+	<div id="navbarleft">
+		<ul id="nav">
+			<li><a href="http://tuxtweaks.com/">Home</a></li>
+			<li class="page_item page-item-2"><a 
+href="http://tuxtweaks.com/about/" title="About This Site">About</a></li>
+<li class="page_item page-item-7"><a 
+href="http://tuxtweaks.com/privacy-policy/" title="Privacy Policy">Privacy
+ Policy</a></li>
+		</ul>
+	</div>
+	
+	<div id="navbarright">
+		<form id="searchform" method="get" action="/index.php">
+		<input value="Search this website..." name="s" id="s" onfocus="if 
+(this.value == 'Search this website...') {this.value = '';}" onblur="if 
+(this.value == '') {this.value = 'Search this website...';}" type="text">
+		<input id="sbutt" value="GO" type="submit"></form>
+	</div>
+
+</div>
+
+<div id="wrap">
+<div id="content" class="widecolumn" role="main">
+
+        <!-- begin l_sidebar -->
+
+<div id="l_sidebar">
+
+	<ul id="l_sidebarwidgeted">
+	<li id="wp-insert-ad-widget-1" class="widget 
+wp_insert_ad_widget_1_create"><div id="ad_widget_1" style="margin: 10px 
+0pt 15px; padding: 0px;"><script type="text/javascript"><!--
+google_ad_client = "pub-1081038784488579";
+/* TuxTweaks SB Text-Image */
+google_ad_slot = "6280344453";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript" src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/show_ads.js">
+</script><ins style="display: inline-table; border: medium none; height:
+ 600px; margin: 0pt; padding: 0pt; position: relative; visibility: 
+visible; width: 160px;"><ins id="aswift_0_anchor" style="display: block;
+ border: medium none; height: 600px; margin: 0pt; padding: 0pt; 
+position: relative; visibility: visible; width: 160px;"><iframe 
+allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" 
+onload="var 
+i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){i+='.call';setTimeout(h,0)}else
+ 
+if(h.match){i+='.nav';w.location.replace(h)}s.log&amp;&amp;s.log.push(i)}"
+ vspace="0" id="aswift_0" name="aswift_0" style="left: 0pt; position: 
+absolute; top: 0pt;" frameborder="0" height="600" scrolling="no" 
+width="160"></iframe></ins></ins></div></li>
+		<li id="recent-posts-2" class="widget widget_recent_entries">		<h2 
+class="widgettitle">Recent Posts</h2>
+		<ul>
+				<li><a 
+href="http://tuxtweaks.com/2012/01/creating-a-terminal-window-clock/" 
+title="Creating A Terminal Window Clock">Creating A Terminal Window 
+Clock</a></li>
+				<li><a 
+href="http://tuxtweaks.com/2011/12/batch-converting-audio-with-gstreamer/"
+ title="Batch Converting Audio With GStreamer">Batch Converting Audio 
+With GStreamer</a></li>
+				<li><a 
+href="http://tuxtweaks.com/2011/11/command-line-basics-create-and-extract-tarballs/"
+ title="Command Line Basics: Create And Extract Tarballs">Command Line 
+Basics: Create And Extract Tarballs</a></li>
+				<li><a href="http://tuxtweaks.com/2011/11/server-move-complete/" 
+title="Server Move Complete">Server Move Complete</a></li>
+				<li><a 
+href="http://tuxtweaks.com/2011/10/comments-temporarily-disabled/" 
+title="Comments Temporarily Disabled">Comments Temporarily Disabled</a></li>
+				</ul>
+		</li>
+<li id="tag_cloud-2" class="widget widget_tag_cloud"><h2 
+class="widgettitle">Tags</h2>
+<div class="tagcloud"><a href="http://tuxtweaks.com/tag/android/" 
+class="tag-link-94" title="4 topics" style="font-size: 8.85366pt;">android</a>
+<a href="http://tuxtweaks.com/tag/apache/" class="tag-link-78" title="6 
+topics" style="font-size: 10.1341pt;">Apache</a>
+<a href="http://tuxtweaks.com/tag/apple/" class="tag-link-84" title="4 
+topics" style="font-size: 8.85366pt;">Apple</a>
+<a href="http://tuxtweaks.com/tag/audio/" class="tag-link-149" title="9 
+topics" style="font-size: 11.4146pt;">audio</a>
+<a href="http://tuxtweaks.com/tag/avast/" class="tag-link-20" title="3 
+topics" style="font-size: 8pt;">avast</a>
+<a href="http://tuxtweaks.com/tag/bash/" class="tag-link-3" title="21 
+topics" style="font-size: 14.3171pt;">bash</a>
+<a href="http://tuxtweaks.com/tag/bitpim/" class="tag-link-57" title="3 
+topics" style="font-size: 8pt;">bitpim</a>
+<a href="http://tuxtweaks.com/tag/command-line/" class="tag-link-65" 
+title="38 topics" style="font-size: 16.4512pt;">command line</a>
+<a href="http://tuxtweaks.com/tag/dell/" class="tag-link-23" title="5 
+topics" style="font-size: 9.53659pt;">dell</a>
+<a href="http://tuxtweaks.com/tag/distro-review/" class="tag-link-82" 
+title="3 topics" style="font-size: 8pt;">Distro Review</a>
+<a href="http://tuxtweaks.com/tag/fedora/" class="tag-link-48" title="5 
+topics" style="font-size: 9.53659pt;">fedora</a>
+<a href="http://tuxtweaks.com/tag/firefox/" class="tag-link-4" title="10
+ topics" style="font-size: 11.7561pt;">firefox</a>
+<a href="http://tuxtweaks.com/tag/flac/" class="tag-link-108" title="6 
+topics" style="font-size: 10.1341pt;">flac</a>
+<a href="http://tuxtweaks.com/tag/freedos/" class="tag-link-46" title="3
+ topics" style="font-size: 8pt;">FreeDOS</a>
+<a href="http://tuxtweaks.com/tag/gadgets/" class="tag-link-18" title="3
+ topics" style="font-size: 8pt;">gadgets</a>
+<a href="http://tuxtweaks.com/tag/gnome/" class="tag-link-6" title="31 
+topics" style="font-size: 15.7683pt;">gnome</a>
+<a href="http://tuxtweaks.com/tag/google/" class="tag-link-19" title="4 
+topics" style="font-size: 8.85366pt;">google</a>
+<a href="http://tuxtweaks.com/tag/google-chrome/" class="tag-link-36" 
+title="6 topics" style="font-size: 10.1341pt;">google chrome</a>
+<a href="http://tuxtweaks.com/tag/gstreamer/" class="tag-link-157" 
+title="4 topics" style="font-size: 8.85366pt;">GStreamer</a>
+<a href="http://tuxtweaks.com/tag/howto/" class="tag-link-7" title="144 
+topics" style="font-size: 21.3171pt;">HowTo</a>
+<a href="http://tuxtweaks.com/tag/hp/" class="tag-link-22" title="6 
+topics" style="font-size: 10.1341pt;">HP</a>
+<a href="http://tuxtweaks.com/tag/humor/" class="tag-link-58" title="3 
+topics" style="font-size: 8pt;">humor</a>
+<a href="http://tuxtweaks.com/tag/imagemagick/" class="tag-link-73" 
+title="8 topics" style="font-size: 10.9878pt;">ImageMagick</a>
+<a href="http://tuxtweaks.com/tag/jaunty/" class="tag-link-16" title="5 
+topics" style="font-size: 9.53659pt;">jaunty</a>
+<a href="http://tuxtweaks.com/tag/karmic-koala/" class="tag-link-81" 
+title="6 topics" style="font-size: 10.1341pt;">karmic koala</a>
+<a href="http://tuxtweaks.com/tag/lamp/" class="tag-link-71" title="8 
+topics" style="font-size: 10.9878pt;">LAMP</a>
+<a href="http://tuxtweaks.com/tag/linux/" class="tag-link-9" title="174 
+topics" style="font-size: 22pt;">linux</a>
+<a href="http://tuxtweaks.com/tag/lucid-lynx/" class="tag-link-119" 
+title="4 topics" style="font-size: 8.85366pt;">Lucid Lynx</a>
+<a href="http://tuxtweaks.com/tag/mp3/" class="tag-link-10" title="11 
+topics" style="font-size: 12.0976pt;">mp3</a>
+<a href="http://tuxtweaks.com/tag/msi-wind/" class="tag-link-52" 
+title="4 topics" style="font-size: 8.85366pt;">MSI Wind</a>
+<a href="http://tuxtweaks.com/tag/nautilus/" class="tag-link-120" 
+title="4 topics" style="font-size: 8.85366pt;">Nautilus</a>
+<a href="http://tuxtweaks.com/tag/netbook/" class="tag-link-51" title="5
+ topics" style="font-size: 9.53659pt;">netbook</a>
+<a href="http://tuxtweaks.com/tag/network/" class="tag-link-24" title="4
+ topics" style="font-size: 8.85366pt;">network</a>
+<a href="http://tuxtweaks.com/tag/news/" class="tag-link-11" title="19 
+topics" style="font-size: 13.9756pt;">news</a>
+<a href="http://tuxtweaks.com/tag/ogg/" class="tag-link-107" title="8 
+topics" style="font-size: 10.9878pt;">ogg</a>
+<a href="http://tuxtweaks.com/tag/open-source/" class="tag-link-72" 
+title="4 topics" style="font-size: 8.85366pt;">open source</a>
+<a href="http://tuxtweaks.com/tag/opinion/" class="tag-link-12" 
+title="16 topics" style="font-size: 13.378pt;">opinion</a>
+<a href="http://tuxtweaks.com/tag/review/" class="tag-link-21" title="7 
+topics" style="font-size: 10.561pt;">review</a>
+<a href="http://tuxtweaks.com/tag/security/" class="tag-link-13" 
+title="11 topics" style="font-size: 12.0976pt;">security</a>
+<a href="http://tuxtweaks.com/tag/ubuntu/" class="tag-link-14" 
+title="127 topics" style="font-size: 20.8902pt;">Ubuntu</a>
+<a href="http://tuxtweaks.com/tag/usb/" class="tag-link-44" title="7 
+topics" style="font-size: 10.561pt;">usb</a>
+<a href="http://tuxtweaks.com/tag/web-development/" class="tag-link-70" 
+title="17 topics" style="font-size: 13.6341pt;">web development</a>
+<a href="http://tuxtweaks.com/tag/windows/" class="tag-link-15" 
+title="24 topics" style="font-size: 14.8293pt;">windows</a>
+<a href="http://tuxtweaks.com/tag/wireless-internet/" 
+class="tag-link-53" title="3 topics" style="font-size: 8pt;">wireless 
+internet</a>
+<a href="http://tuxtweaks.com/tag/wordpress/" class="tag-link-79" 
+title="8 topics" style="font-size: 10.9878pt;">WordPress</a></div>
+</li>
+<li id="text-413084923" class="widget widget_text">			<div 
+class="textwidget"><a href="http://eff.org/bloggers"><img 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/bloggers-rights-148x120px.png"
+ alt="Bloggers' Rights at EFF" height="120" width="148" border="0"></a><br></div>
+		</li>
+	</ul>
+	
+</div>
+
+<!-- end l_sidebar -->
+	<div id="contentleft">
+	
+				
+		<h1>Installing LAMP on Ubuntu 10.04 and 10.10 (Lucid Lynx, Maverick 
+Meerkat)</h1>
+		
+		<div class="date">
+			April 29, 2010  by <a href="http://tuxtweaks.com/author/Linerd/" 
+title="Posts by Linerd" rel="author">Linerd</a><br>Filed under: <a 
+href="http://tuxtweaks.com/category/howto/" title="View all posts in 
+HowTo" rel="category tag">HowTo</a>, <a 
+href="http://tuxtweaks.com/category/linux/" title="View all posts in 
+linux" rel="category tag">linux</a>, <a 
+href="http://tuxtweaks.com/category/ubuntu/" title="View all posts in 
+Ubuntu" rel="category tag">Ubuntu</a>, <a 
+href="http://tuxtweaks.com/category/web-development/" title="View all 
+posts in web development" rel="category tag">web development</a>&nbsp; 
+		</div>
+		
+		<div id="in_post_ad_left_1" style="float: left; margin: 5px 5px 5px 
+0pt; padding: 0px;"><script type="text/javascript"><!--
+google_ad_client = "pub-1081038784488579";
+/* Post 300x250 */
+google_ad_slot = "9348094791";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/show_ads.js">
+</script><ins style="display: inline-table; border: medium none; height:
+ 250px; margin: 0pt; padding: 0pt; position: relative; visibility: 
+visible; width: 300px;"><ins id="aswift_1_anchor" style="display: block;
+ border: medium none; height: 250px; margin: 0pt; padding: 0pt; 
+position: relative; visibility: visible; width: 300px;"><iframe 
+allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" 
+onload="var 
+i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){i+='.call';setTimeout(h,0)}else
+ 
+if(h.match){i+='.nav';w.location.replace(h)}s.log&amp;&amp;s.log.push(i)}"
+ vspace="0" id="aswift_1" name="aswift_1" style="left: 0pt; position: 
+absolute; top: 0pt;" frameborder="0" height="250" scrolling="no" 
+width="300"></iframe></ins></ins></div><p>If you're developing websites,
+ it's nice to be able to test your code in the privacy of your own 
+computer rather that out in the public internet. In order to do that, 
+you'll need to install a webserver on your development computer. LAMP 
+(Linux, Apache, MySQL, php) is one of the most common web hosting 
+platforms, so it's a perfect environment for you to build and test your 
+website code. If you carefully follow these step by step instructions, 
+you'll have your own LAMP setup running in no time.&nbsp; <span 
+id="more-1281"></span></p>
+<h2>Install LAMP on Ubuntu</h2>
+<p>The Ubuntu developers have made it easy to install the LAMP server 
+packages with a single command. Simply open a terminal window and enter 
+the following.<br>
+</p><div class="term">sudo apt-get install lamp-server^</div><br>
+No, that's not a typo. Please make sure to include the caret (^). The 
+command will not work without it.
+<div id="attachment_1282" class="wp-caption alignnone" style="width: 
+160px;"><a 
+href="http://tuxtweaks.com/wp-content/uploads/2010/04/01_lamp_wm.png" 
+rel="lightbox[1281]"><img class="size-thumbnail wp-image-1282" 
+title="sudo apt-get install lamp-server^" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/01_lamp_wm-150x85.png"
+ alt="sudo apt-get install lamp-server^" height="85" width="150"></a><p 
+class="wp-caption-text">sudo apt-get install lamp-server^</p></div>
+<p>The apt package manager will show all the packages that need to be  
+installed. Hit <strong>&lt;Enter&gt;</strong> to confirm that you want  
+to install them.</p>
+<div id="attachment_1283" class="wp-caption alignnone" style="width: 
+160px;"><a 
+href="http://tuxtweaks.com/wp-content/uploads/2010/04/02_lamp_wm.png" 
+rel="lightbox[1281]"><img class="size-thumbnail wp-image-1283" 
+title="LAMP packages" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/02_lamp_wm-150x85.png"
+ alt="LAMP packages" height="85" width="150"></a><p 
+class="wp-caption-text">LAMP packages</p></div>
+<p>You will then be prompted to change the password for the root user on
+  the&nbsp;<strong>MySQL</strong> database.</p>
+<div id="attachment_1284" class="wp-caption alignnone" style="width: 
+160px;"><a 
+href="http://tuxtweaks.com/wp-content/uploads/2010/04/03_lamp_wm.png" 
+rel="lightbox[1281]"><img class="size-thumbnail wp-image-1284" 
+title="Set MySQL root password" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/03_lamp_wm-150x85.png"
+ alt="Set MySQL root password" height="85" width="150"></a><p 
+class="wp-caption-text">Set MySQL root password</p></div>
+<p>Enter the password you want. You'll be prompted to enter it a second 
+ time to confirm.</p>
+<p>After you confirm your password, apt will continue to install the  
+rest of the packages.</p>
+<p>Congratulations, your <strong>LAMP</strong> installation is now 
+complete! That was the easy  part, now you need to get a few things 
+configured to make your system easy to  work with.</p>
+<h2>Test Apache</h2>
+<p>Open a web browser and enter the address <strong>http://localhost/</strong>.
+  You should see a web page that says <strong>"It Works!"</strong></p>
+<div id="attachment_1285" class="wp-caption alignnone" style="width: 
+160px;"><strong><a 
+href="http://tuxtweaks.com/wp-content/uploads/2010/04/04_lamp_wm.png" 
+rel="lightbox[1281]"><img class="size-thumbnail wp-image-1285" 
+title="Testing Apache" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/04_lamp_wm-150x80.png"
+ alt="Testing Apache" height="80" width="150"></a></strong><p 
+class="wp-caption-text">Testing Apache</p></div>
+<h2>Test php</h2>
+<p>Now that you know Apache works, you'll want to test the <strong>php</strong>
+ installation. You'll need to create a file in <strong>/var/www</strong>
+ called <strong>testing.php</strong>. Open a terminal and enter:</p>
+<div class="term">sudo nano /var/www/testing.php</div>
+<p>Enter the following line into the text editor, save the file and 
+exit.</p>
+<div class="term">&lt;?php phpinfo(); ?&gt;</div>
+<p>Next, restart Apache with the following terminal command:</p>
+<div class="term">sudo /etc/init.d/apache2 restart</div>
+<p>Now go back to your web browser and enter the address <strong>http://localhost/testing.php/.</strong>
+ You should see a page displaying version information for your php  
+installation.</p>
+<div id="attachment_1286" class="wp-caption alignnone" style="width: 
+160px;"><a 
+href="http://tuxtweaks.com/wp-content/uploads/2010/04/06_lamp_wm.png" 
+rel="lightbox[1281]"><img class="size-thumbnail wp-image-1286" 
+title="php Information" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/06_lamp_wm-150x96.png"
+ alt="php Information" height="96" width="150"></a><p 
+class="wp-caption-text">php Information</p></div>
+<h2>Configure MySQL</h2>
+<p>Since I'm installing LAMP for a web development environment, I want 
+the MySQL database to be bound to the localhost IP address. This should 
+be  127.0.0.1 for your system. You can verify it with this terminal 
+command.</p>
+<div class="term">cat /etc/hosts | grep localhost</div>
+<p>You'll now want to verify that the correct bind address is set up in 
+MySQL's  <em>my.cnf</em> file.</p>
+<div class="term">cat /etc/mysql/my.cnf | grep bind-address</div>
+<p>You should see a line that looks like this:</p>
+<div class="term">
+<pre>bind-address		= 127.0.0.1</pre>
+<p></p></div>
+<p>If the IP address doesn't match the one for your system, you'll need 
+to  edit the <em>my.cnf</em> file to correct it.</p>
+<h2>Install phpMyAdmin</h2>
+<p>You don't need to install phpMyAdmin, but it's a much easier way to 
+get  in and adjust things in your MySQL database if you're not  familiar
+ with MySQL's commands. You can install phpMyAdmin from the  command 
+line with:</p>
+<div class="term">sudo apt-get install libapache2-mod-auth-mysql 
+phpmyadmin</div>
+<p>The installation will prompt you to select a web server for automatic
+  configuration.</p>
+<div id="attachment_1287" class="wp-caption alignnone" style="width: 
+160px;"><a 
+href="http://tuxtweaks.com/wp-content/uploads/2010/04/07_lamp_wm.png" 
+rel="lightbox[1281]"><img class="size-thumbnail wp-image-1287" 
+title="phpMyAdmin Setup" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/07_lamp_wm-150x85.png"
+ alt="phpMyAdmin Setup" height="85" width="150"></a><p 
+class="wp-caption-text">phpMyAdmin Setup</p></div>
+<p><strong>This is important! </strong>Use the space bar on your 
+keyboard to select <strong>apache2.</strong> Make sure there's a <strong>*</strong>
+ next to <strong>apache2</strong> like the picture below and then hit <strong>&lt;Enter&gt;</strong>.&nbsp;
+ (Click the picture to enlarge it and see what I'm talking about.)</p>
+<div id="attachment_1288" class="wp-caption alignnone" style="width: 
+160px;"><a 
+href="http://tuxtweaks.com/wp-content/uploads/2010/04/08_lamp_wm.png" 
+rel="lightbox[1281]"><img class="size-thumbnail wp-image-1288" 
+title="phpMyAdmin Setup: select apache2" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/08_lamp_wm-150x85.png"
+ alt="phpMyAdmin Setup: select apache2" height="85" width="150"></a><p 
+class="wp-caption-text">phpMyAdmin Setup: select apache2</p></div>
+<p>The next screen will explain some information about database 
+configuration. Hit the <strong>&lt;Enter&gt;</strong> key to move on.</p>
+<div id="attachment_1289" class="wp-caption alignnone" style="width: 
+160px;"><a 
+href="http://tuxtweaks.com/wp-content/uploads/2010/04/09_lamp_wm.png" 
+rel="lightbox[1281]"><img class="size-thumbnail wp-image-1289" 
+title="phpMyAdmin database config" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/09_lamp_wm-150x85.png"
+ alt="phpMyAdmin database config" height="85" width="150"></a><p 
+class="wp-caption-text">phpMyAdmin database config</p></div>
+<p>Another screen will come up asking if you want to configure a new  
+database called <strong><em>dbconfig-common</em></strong>. &nbsp;Since 
+this  is a fresh installation, use the <strong>&lt;Tab&gt;</strong> key 
+to  select <strong>Yes</strong> and hit <strong>&lt;Enter&gt;</strong>.</p>
+<div id="attachment_1290" class="wp-caption alignnone" style="width: 
+160px;"><a 
+href="http://tuxtweaks.com/wp-content/uploads/2010/04/10_lamp_wm.png" 
+rel="lightbox[1281]"><img class="size-thumbnail wp-image-1290" 
+title="phpMyAdmin dbconfig-common" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/10_lamp_wm-150x85.png"
+ alt="phpMyAdmin dbconfig-common" height="85" width="150"></a><p 
+class="wp-caption-text">phpMyAdmin dbconfig-common</p></div>
+<p>You'll be prompted next to enter the MySQL root password. Enter the  
+MySQL root password that you created earlier, hit <strong>&lt;Tab&gt;</strong>
+ to select <strong>Ok</strong> and hit <strong>&lt;Enter&gt;</strong>.</p>
+<div id="attachment_1291" class="wp-caption alignnone" style="width: 
+160px;"><a 
+href="http://tuxtweaks.com/wp-content/uploads/2010/04/11_lamp_wm.png" 
+rel="lightbox[1281]"><img class="size-thumbnail wp-image-1291" 
+title="MySQL root password" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/11_lamp_wm-150x85.png"
+ alt="MySQL root password" height="85" width="150"></a><p 
+class="wp-caption-text">MySQL root password</p></div>
+<p>You'll then be prompted to enter a MySQL application password for  
+phpmyadmin. You can hit <strong>&lt;Enter&gt;</strong> and a random  
+password will be generated. I chose to use the same password that I used
+  for the root MySQL password.</p>
+<div id="attachment_1292" class="wp-caption alignnone" style="width: 
+160px;"><a 
+href="http://tuxtweaks.com/wp-content/uploads/2010/04/12_lamp_wm.png" 
+rel="lightbox[1281]"><img class="size-thumbnail wp-image-1292" 
+title="MySQL application password" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/12_lamp_wm-150x85.png"
+ alt="MySQL application password" height="85" width="150"></a><p 
+class="wp-caption-text">MySQL application password</p></div>
+<p>If you enter your own password, a password  confirmation screen will 
+come up. Confirm your password.</p>
+<div id="attachment_1293" class="wp-caption alignnone" style="width: 
+160px;"><a 
+href="http://tuxtweaks.com/wp-content/uploads/2010/04/13_lamp_wm.png" 
+rel="lightbox[1281]"><img class="size-thumbnail wp-image-1293" 
+title="MySQL application password confirmation" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/13_lamp_wm-150x84.png"
+ alt="MySQL application password confirmation" height="84" width="150"></a><p
+ class="wp-caption-text">MySQL application password confirmation</p></div>
+<p>Your phpMyAdmin installation and configuration is now complete.</p>
+<h2>Testing phpMyAdmin</h2>
+<p>Open your web browser and enter the address <strong>http://localhost/phpmyadmin/</strong>.
+  You should see a page like this.</p>
+<div id="attachment_1294" class="wp-caption alignnone" style="width: 
+160px;"><a 
+href="http://tuxtweaks.com/wp-content/uploads/2010/04/14_lamp_wm.png" 
+rel="lightbox[1281]"><img class="size-thumbnail wp-image-1294" 
+title="phpMyAdmin log in" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/14_lamp_wm-150x111.png"
+ alt="phpMyAdmin log in" height="111" width="150"></a><p 
+class="wp-caption-text">phpMyAdmin log in</p></div>
+<p>You can log in with the username <strong>root</strong> and the root  
+password that you created earlier.</p>
+<div id="attachment_1295" class="wp-caption alignnone" style="width: 
+160px;"><a 
+href="http://tuxtweaks.com/wp-content/uploads/2010/04/15_lamp_wm.png" 
+rel="lightbox[1281]"><img class="size-thumbnail wp-image-1295" 
+title="Logged into phpMyAdmin" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/15_lamp_wm-150x111.png"
+ alt="Logged into phpMyAdmin" height="111" width="150"></a><p 
+class="wp-caption-text">Logged into phpMyAdmin</p></div>
+<p>Congratulations, you're now ready to start building your local 
+website.  If you're only working on one site you can put all of your 
+files into <em><strong>/var/www</strong></em>.  &nbsp;If you'll be 
+working on multiple sites you may want to consider some  additional <strong><a
+ title="Basic Apache HTTP server configuration" 
+href="http://tuxtweaks.com/2010/04/2009/07/how-to-configure-apache-linux/">Apache
+  configuration</a></strong> to keep things neat and clean on you 
+system.</p>
+<div id="in_post_ad_bottom_1" style="clear: both; margin: 5px; padding: 
+0px;"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-1081038784488579";
+/* 300x250, created 7/28/09 */
+google_ad_slot = "5189993621";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/show_ads.js">
+</script><ins style="display: inline-table; border: medium none; height:
+ 250px; margin: 0pt; padding: 0pt; position: relative; visibility: 
+visible; width: 300px;"><ins id="aswift_2_anchor" style="display: block;
+ border: medium none; height: 250px; margin: 0pt; padding: 0pt; 
+position: relative; visibility: visible; width: 300px;"><iframe 
+allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" 
+onload="var 
+i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){i+='.call';setTimeout(h,0)}else
+ 
+if(h.match){i+='.nav';w.location.replace(h)}s.log&amp;&amp;s.log.push(i)}"
+ vspace="0" id="aswift_2" name="aswift_2" style="left: 0pt; position: 
+absolute; top: 0pt;" frameborder="0" height="250" scrolling="no" 
+width="300"></iframe></ins></ins></div><div style="clear: both;"></div><div
+ style="clear: both;"></div>
+				
+		<!--
+		<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+			xmlns:dc="http://purl.org/dc/elements/1.1/"
+			xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+		<rdf:Description rdf:about="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/"
+    dc:identifier="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/"
+    dc:title="Installing LAMP on Ubuntu 10.04 and 10.10 (Lucid Lynx, Maverick Meerkat)"
+    trackback:ping="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/trackback/" />
+</rdf:RDF>		-->
+		
+		<div class="postmeta">
+			<p>Tags: <a href="http://tuxtweaks.com/tag/apache/" rel="tag">Apache</a>,
+ <a href="http://tuxtweaks.com/tag/howto/" rel="tag">HowTo</a>, <a 
+href="http://tuxtweaks.com/tag/lamp/" rel="tag">LAMP</a>, <a 
+href="http://tuxtweaks.com/tag/linux/" rel="tag">linux</a>, <a 
+href="http://tuxtweaks.com/tag/lucid-lynx/" rel="tag">Lucid Lynx</a>, <a
+ href="http://tuxtweaks.com/tag/phpmyadmin/" rel="tag">phpMyAdmin</a>, <a
+ href="http://tuxtweaks.com/tag/ubuntu/" rel="tag">Ubuntu</a>, <a 
+href="http://tuxtweaks.com/tag/web-development/" rel="tag">web 
+development</a> </p>
+		</div>
+					
+				
+		<h3>Comments</h3>
+		
+<!-- You can start editing here. -->
+
+	<h3 id="comments">446 Responses to “Installing LAMP on Ubuntu 10.04 and
+ 10.10 (Lucid Lynx, Maverick Meerkat)”</h3>
+
+	<div class="navigation">
+		<div class="alignleft"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-16/#comments">«
+ Older Comments</a></div>
+		<div class="alignright"></div>
+	</div>
+
+	<ol class="commentlist">
+			<li class="comment even thread-even depth-1 parent" id="comment-7342">
+				<div id="div-comment-7342" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/e081b4bc2fa45f525e1b8953dc23060a.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">maali</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7342">
+			November 4, 2011 at 11:05 AM</a>		</div>
+
+		<p>Hi,</p>
+<p>   While installing i am getting below error on ubuntu 10.04:<br>
+   The following packages have unmet dependencies:<br>
+  mysql-client-5.1: Conflicts: mysql-client-5.0 but 5.0.51a-3ubuntu5 is 
+to be installed<br>
+  mysql-client-core-5.1: Conflicts: mysql-client-5.0 but 
+5.0.51a-3ubuntu5 is to be installed<br>
+  mysql-server-5.1: Conflicts: mysql-server-5.0 but 5.0.51a-3ubuntu5 is 
+to be installed<br>
+  mysql-server-core-5.1: Conflicts: mysql-server-5.0 but 
+5.0.51a-3ubuntu5 is to be installed<br>
+E: Broken packages</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7342#respond"
+ onclick='return addComment.moveForm("div-comment-7342", "7342", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		<ul class="children">
+		<li class="comment odd alt depth-2" id="comment-7385">
+				<div id="div-comment-7385" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/c0ffa949725c73ee86480b93831eb6e4.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">KANT</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7385">
+			November 12, 2011 at 5:09 PM</a>		</div>
+
+		<p>I got the same issue too ...<br>
+it works after i updated the Ubuntu</p>
+<p>sudo apt-get update</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7385#respond"
+ onclick='return addComment.moveForm("div-comment-7385", "7385", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		</li>
+</ul>
+</li>
+		<li class="comment even thread-odd thread-alt depth-1" 
+id="comment-7373">
+				<div id="div-comment-7373" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/923fec2892ff86d543e0de7e189e6872.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">ccbogel</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7373">
+			November 11, 2011 at 6:07 AM</a>		</div>
+
+		<p>The installation worked smoothly as exactly as shown. I installed 
+on Ubuntu 11.10 Oneric</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7373#respond"
+ onclick='return addComment.moveForm("div-comment-7373", "7373", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-even depth-1 parent" 
+id="comment-7396">
+				<div id="div-comment-7396" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/c2a319003d488220f8f7d52ac6aa60b7.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">shailendra</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7396">
+			November 14, 2011 at 5:43 AM</a>		</div>
+
+		<p>when i was installing LAMP server on Ubuntu 10.04 server i got 
+following error<br>
+root@HM01AP01:~# apt-get install lamp-server^<br>
+E: Could not get lock /var/lib/dpkg/lock - open (11: Resource 
+temporarily unavailable)<br>
+E: Unable to lock the administration directory (/var/lib/dpkg/), is 
+another process using it?</p>
+<p>please solve this issue...!</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7396#respond"
+ onclick='return addComment.moveForm("div-comment-7396", "7396", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		<ul class="children">
+		<li class="comment byuser comment-author-Linerd bypostauthor even 
+depth-2" id="comment-7397">
+				<div id="div-comment-7397" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/d494125e2e124eb36b120d8f959010f8.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">Linerd</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7397">
+			November 14, 2011 at 8:24 AM</a>		</div>
+
+		<p>I've seen this error when there's another package manager running. 
+Was Synaptic or the Update Manager running at the time of the error?</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7397#respond"
+ onclick='return addComment.moveForm("div-comment-7397", "7397", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt depth-2" id="comment-7545">
+				<div id="div-comment-7545" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/c1e9a2dc5638c78fdd1eeba7b78b3013.jpeg"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">pemborsky</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7545">
+			December 3, 2011 at 5:50 PM</a>		</div>
+
+		<p>You must install as root, like so:</p>
+<p>sudo apt-get install lamp-server^</p>
+<p>...at which point you'll be prompted to enter your administrator 
+password. Enter it, then press the return key. Should work fine.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7545#respond"
+ onclick='return addComment.moveForm("div-comment-7545", "7545", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		</li>
+</ul>
+</li>
+		<li class="comment even thread-odd thread-alt depth-1" 
+id="comment-7434">
+				<div id="div-comment-7434" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/40d45cb16d4550f0e30e8868e4a9cf65.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">jephath</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7434">
+			November 20, 2011 at 2:14 PM</a>		</div>
+
+		<p>Installation worked smoothly, thanks.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7434#respond"
+ onclick='return addComment.moveForm("div-comment-7434", "7434", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-even depth-1" id="comment-7525">
+				<div id="div-comment-7525" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/5b1cd9c9b92a4cbb261b4212c509f48d.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">Prasanth</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7525">
+			November 30, 2011 at 1:17 PM</a>		</div>
+
+		<p>Installation worked very Smoothly Thanks...</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7525#respond"
+ onclick='return addComment.moveForm("div-comment-7525", "7525", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-odd thread-alt depth-1" 
+id="comment-7540">
+				<div id="div-comment-7540" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/91a529a00b5e5d78ca5686376820f553.jpeg"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn"><a href="http://iamtotti.com/" rel="external nofollow" 
+class="url">Totti Anh Nguyen</a></cite> <span class="says">says:</span>	
+	</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7540">
+			December 2, 2011 at 5:28 PM</a>		</div>
+
+		<p>Great tutorial.. works all through..</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7540#respond"
+ onclick='return addComment.moveForm("div-comment-7540", "7540", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-even depth-1" id="comment-7546">
+				<div id="div-comment-7546" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/6764149422584070f9675eaf7c4e1802.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">Takis</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7546">
+			December 4, 2011 at 4:35 AM</a>		</div>
+
+		<p>Very good guide. No problem during installation. Thanks a lot!</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7546#respond"
+ onclick='return addComment.moveForm("div-comment-7546", "7546", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-odd thread-alt depth-1" 
+id="comment-7566">
+				<div id="div-comment-7566" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/7e232884ae1af683836d436727ad609e.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">Zen420</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7566">
+			December 7, 2011 at 2:33 AM</a>		</div>
+
+		<p>Hi, I was trying your installation method and ran into the 
+following...</p>
+<p><code><br>
+~# sudo apt-get install lamp-server^<br>
+sudo: unable to resolve host Zen420<br>
+Reading package lists... Done<br>
+Building dependency tree<br>
+Reading state information... Done<br>
+libapr1 is already the newest version.<br>
+php5-common is already the newest version.<br>
+libapr1 is already the newest version.<br>
+php5-common is already the newest version.<br>
+The following extra packages will be installed:<br>
+  apache2 apache2-mpm-prefork apache2-utils apache2.2-bin 
+apache2.2-common<br>
+  libapache2-mod-php5 libaprutil1-dbd-sqlite3 libaprutil1-ldap<br>
+  libmysqlclient16 mysql-common php5-mysql<br>
+Suggested packages:<br>
+  apache2-doc apache2-suexec apache2-suexec-custom php-pear<br>
+The following NEW packages will be installed:<br>
+  apache2 apache2-mpm-prefork apache2-utils apache2.2-bin 
+apache2.2-common<br>
+  libapache2-mod-php5 libaprutil1-dbd-sqlite3 libaprutil1-ldap<br>
+  libmysqlclient16 mysql-common php5-mysql<br>
+0 upgraded, 11 newly installed, 0 to remove and 5 not upgraded.<br>
+Need to get 0B/8,071kB of archives.<br>
+After this operation, 22.0MB of additional disk space will be used.<br>
+Do you want to continue [Y/n]?<br>
+</code></p>
+<p>I never had any prompts about setting up mySQL password... Didnt try 
+past that because if this fails, I cannot move forward with the project 
+that im working on. I am running Backtrack 5 which i believe is based 
+off Ubuntu. Is this the reason why I am failing the install. I am 
+updated as of 2 mins ago.. Any help would be greatly appreciated...</p>
+<p>Thanks,<br>
+Zen420</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7566#respond"
+ onclick='return addComment.moveForm("div-comment-7566", "7566", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-even depth-1" id="comment-7567">
+				<div id="div-comment-7567" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/7e232884ae1af683836d436727ad609e.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">Zen420</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7567">
+			December 7, 2011 at 3:17 AM</a>		</div>
+
+		<p>*Solved.. I just re-installed MySQL...</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7567#respond"
+ onclick='return addComment.moveForm("div-comment-7567", "7567", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-odd thread-alt depth-1 parent" 
+id="comment-7672">
+				<div id="div-comment-7672" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/41a0c84d47653d65fe7ff6076374ee0a.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn"><a href="http://updateandroid.net/" rel="external nofollow" 
+class="url">Jim81</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7672">
+			December 21, 2011 at 5:26 PM</a>		</div>
+
+		<p>I cannot get <a href="http://localhost/phpmyadmin/" rel="nofollow">http://localhost/phpmyadmin/</a>
+ to work it says not found. I am not sure what I am doing wrong I have 
+tried this 3 times. everything else seems to work.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7672#respond"
+ onclick='return addComment.moveForm("div-comment-7672", "7672", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		<ul class="children">
+		<li class="comment byuser comment-author-Linerd bypostauthor odd alt 
+depth-2" id="comment-7673">
+				<div id="div-comment-7673" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/d494125e2e124eb36b120d8f959010f8.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">Linerd</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7673">
+			December 21, 2011 at 5:52 PM</a>		</div>
+
+		<p>See my latest version of this procedure: <a 
+href="http://tuxtweaks.com/2011/10/install-lamp-and-phpmyadmin-on-ubuntu-11-10/"
+ rel="nofollow">http://tuxtweaks.com/2011/10/install-lamp-and-phpmyadmin-on-ubuntu-11-10/</a><br>
+Scroll down to the section on Fixing phpMyAdmin and that should fix you 
+up.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7673#respond"
+ onclick='return addComment.moveForm("div-comment-7673", "7673", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		</li>
+</ul>
+</li>
+		<li class="comment even thread-even depth-1" id="comment-7691">
+				<div id="div-comment-7691" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/e141eae7b60f0dbff51ba7857e1f7339.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">shimba</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7691">
+			December 27, 2011 at 12:53 PM</a>		</div>
+
+		<p>Thanx a million Linerd its real a timeserver, it has worked for me 
+more than once.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7691#respond"
+ onclick='return addComment.moveForm("div-comment-7691", "7691", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" 
+id="comment-7698">
+				<div id="div-comment-7698" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/6fd7c50d45e120dc6dc1009eb63f2053.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn"><a href="http://www.webnapps.co.uk/" rel="external nofollow" 
+class="url">Hasan Azizul Haque</a></cite> <span class="says">says:</span>
+		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7698">
+			December 30, 2011 at 7:59 AM</a>		</div>
+
+		<p>That works like a pro. <img 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/icon_smile.gif"
+ alt=":)" class="wp-smiley"> </p>
+<p>Thanks.</p>
+<p>I keep this page for my personal reference on <a 
+href="http://www.webnapps.co.uk/helpful-links" rel="nofollow">http://www.webnapps.co.uk/helpful-links</a><br>
+I hope this will be OK with you.</p>
+<p>Cheers.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7698#respond"
+ onclick='return addComment.moveForm("div-comment-7698", "7698", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-7715">
+				<div id="div-comment-7715" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/7f07408803816462acae79cc499048e3.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn"><a href="http://hopworks.com/" rel="external nofollow" 
+class="url">Gary Rubin</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7715">
+			January 4, 2012 at 1:22 PM</a>		</div>
+
+		<p>I have run into an issue during the installation of phpmyadmin.<br>
+<code>An error occurred while installing the database:</code></p>
+<p>mysql said: ERROR 13 (HY000) at line 1: Can't get stat of 
+'./phpmyadmin'<br>
+(Errcode: 13)</p>
+<p>I researched it and found some information that it has something to 
+do with AppArmor, but the ill-advised (security reasons) fix didn't work
+ for me.  <a 
+href="http://stackoverflow.com/questions/2783313/how-can-i-get-around-mysql-errcode-13-with-select-into-outfile"
+ title="How can I get around MySQL Errcode 13 with SELECT INTO OUTFILE?"
+ rel="nofollow"></a></p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7715#respond"
+ onclick='return addComment.moveForm("div-comment-7715", "7715", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" 
+id="comment-7731">
+				<div id="div-comment-7731" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/45d17bd1f40d0c2369e1b81a59104f18.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">Avinash</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7731">
+			January 7, 2012 at 6:22 AM</a>		</div>
+
+		<p>how much time will it take to load?? because im aint getting the  
+local host process the last line i see in ubuntu 10.04 is<br>
+""ldconfid deffered processing now taking place<br>
+avi@ubuntu:~$""<br>
+ can u help me out plss bro its a project</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7731#respond"
+ onclick='return addComment.moveForm("div-comment-7731", "7731", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1 parent" id="comment-7732">
+				<div id="div-comment-7732" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/45d17bd1f40d0c2369e1b81a59104f18.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">Avinash</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7732">
+			January 7, 2012 at 6:40 AM</a>		</div>
+
+		<p>now it says<br>
+"apache2:Could not reliably determine the server's fully qualified 
+domain name"</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7732#respond"
+ onclick='return addComment.moveForm("div-comment-7732", "7732", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		<ul class="children">
+		<li class="comment byuser comment-author-Linerd bypostauthor odd alt 
+depth-2" id="comment-7733">
+				<div id="div-comment-7733" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/d494125e2e124eb36b120d8f959010f8.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">Linerd</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7733">
+			January 7, 2012 at 11:34 AM</a>		</div>
+
+		<p>Take a look at the bottom of this post: <a 
+href="http://tuxtweaks.com/2009/07/how-to-configure-apache-linux/" 
+rel="nofollow">http://tuxtweaks.com/2009/07/how-to-configure-apache-linux/</a></p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7733#respond"
+ onclick='return addComment.moveForm("div-comment-7733", "7733", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		</li>
+</ul>
+</li>
+		<li class="comment even thread-odd thread-alt depth-1 parent" 
+id="comment-7784">
+				<div id="div-comment-7784" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/45d17bd1f40d0c2369e1b81a59104f18.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">Avinash</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7784">
+			January 17, 2012 at 1:23 AM</a>		</div>
+
+		<p>in the last step of urs<br>
+what username should i use???<br>
+my ubuntu name was avinash and password was same for all  i mean for  
+mysql as well as<br>
+for the ubuntu start  now it says "" #1045 cannot log into mysql 
+server""  please help</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7784#respond"
+ onclick='return addComment.moveForm("div-comment-7784", "7784", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		<ul class="children">
+		<li class="comment byuser comment-author-Linerd bypostauthor odd alt 
+depth-2" id="comment-7790">
+				<div id="div-comment-7790" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/d494125e2e124eb36b120d8f959010f8.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">Linerd</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7790">
+			January 17, 2012 at 7:55 AM</a>		</div>
+
+		<p>Do you mean when you're logging into phpMyAdmin? The user name 
+should be <strong>root</strong> for that.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7790#respond"
+ onclick='return addComment.moveForm("div-comment-7790", "7790", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		</li>
+</ul>
+</li>
+		<li class="comment even thread-even depth-1 parent" id="comment-7826">
+				<div id="div-comment-7826" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/f567d42bec9fa3ce1068faafa85ecd14.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">Laurence</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7826">
+			January 19, 2012 at 12:21 PM</a>		</div>
+
+		<p>Hi, </p>
+<p>Thanks very much for the walk through. Worked like a dream except for
+ one step:</p>
+<p>When testing PHP, I can't save the file <b>testing.php</b> to the <b>www</b>
+ folder. When I try and save I get the error message: "You do not have 
+the permission necessary to save the file"</p>
+<p>And when I enter <b>sudo nano /var/www/testing.php</b>  into the 
+terminal, I get the message: "command not found".</p>
+<p>please help</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7826#respond"
+ onclick='return addComment.moveForm("div-comment-7826", "7826", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		<ul class="children">
+		<li class="comment byuser comment-author-Linerd bypostauthor odd alt 
+depth-2 parent" id="comment-7829">
+				<div id="div-comment-7829" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/d494125e2e124eb36b120d8f959010f8.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">Linerd</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7829">
+			January 19, 2012 at 12:43 PM</a>		</div>
+
+		<p>If you're familiar with the vi editor, you could try using that 
+instead of nano. </p>
+<div class="term">sudo vi /var/www/testing.php</div>
+<p>or if you have the GNOME desktop you can use</p>
+<div class="term">gksudo gedit</div>
+<p> and then save the file as /var/www/testing.php</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7829#respond"
+ onclick='return addComment.moveForm("div-comment-7829", "7829", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		<ul class="children">
+		<li class="comment even depth-3" id="comment-7847">
+				<div id="div-comment-7847" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/f567d42bec9fa3ce1068faafa85ecd14.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">Laurence</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7847">
+			January 20, 2012 at 7:18 AM</a>		</div>
+
+		<p>Hi,</p>
+<p>Thanks for your help. Stumbled accross the solution here:</p>
+<p><a href="http://ubuntuforums.org/showthread.php?t=1464600" 
+rel="nofollow">http://ubuntuforums.org/showthread.php?t=1464600</a></p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7847#respond"
+ onclick='return addComment.moveForm("div-comment-7847", "7847", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		</li>
+</ul>
+</li>
+		<li class="comment odd alt depth-2" id="comment-7967">
+				<div id="div-comment-7967" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/356a15f1d37afc841173e81a6abcb309.jpeg"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">gustav</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7967">
+			February 2, 2012 at 10:15 PM</a>		</div>
+
+		<p>that what happen if you not save the file. press Ctrl-O to write 
+(save) it.</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7967#respond"
+ onclick='return addComment.moveForm("div-comment-7967", "7967", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		</li>
+</ul>
+</li>
+		<li class="comment even thread-odd thread-alt depth-1" 
+id="comment-7827">
+				<div id="div-comment-7827" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/f567d42bec9fa3ce1068faafa85ecd14.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">Laurence</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7827">
+			January 19, 2012 at 12:22 PM</a>		</div>
+
+		<p>and evidently I also need to get the hang of html tags...</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7827#respond"
+ onclick='return addComment.moveForm("div-comment-7827", "7827", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-even depth-1 parent" 
+id="comment-7948">
+				<div id="div-comment-7948" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/42531d7956cfed2aedb505c95e90a696.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">Danny</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7948">
+			February 1, 2012 at 3:55 AM</a>		</div>
+
+		<p>i have installed LAMP server successfully and every single stage of
+ the process<br>
+going well but when it comes to matter of testing , it keeps telling the
+ following categorically message</p>
+<p>The requested URL /phpmyadmin was not found on this server.<br>
+Apache/2.2.17 (Ubuntu) Server at localhost Port 80</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7948#respond"
+ onclick='return addComment.moveForm("div-comment-7948", "7948", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		<ul class="children">
+		<li class="comment byuser comment-author-Linerd bypostauthor even 
+depth-2" id="comment-7952">
+				<div id="div-comment-7952" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/d494125e2e124eb36b120d8f959010f8.png"
+ class="avatar avatar-32 photo" height="32" width="32">		<cite 
+class="fn">Linerd</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-17/#comment-7952">
+			February 1, 2012 at 12:31 PM</a>		</div>
+
+		<p>Danny - Check out <a 
+href="http://tuxtweaks.com/2011/10/install-lamp-and-phpmyadmin-on-ubuntu-11-10/"
+ rel="nofollow">http://tuxtweaks.com/2011/10/install-lamp-and-phpmyadmin-on-ubuntu-11-10/</a>
+ and scroll down to the section on Fixing phpMyAdmin</p>
+
+		<div class="reply">
+		<a class="comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/?replytocom=7952#respond"
+ onclick='return addComment.moveForm("div-comment-7952", "7952", 
+"respond", "1281")'>Reply</a>		</div>
+				</div>
+		</li>
+</ul>
+</li>
+	</ol>
+
+	<div class="navigation">
+		<div class="alignleft"><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/comment-page-16/#comments">«
+ Older Comments</a></div>
+		<div class="alignright"></div>
+	</div>
+ 
+
+
+
+<div id="respond">
+
+
+<div class="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/#respond"
+ style="display: none;">Click here to cancel reply.</a></small>
+</div>
+
+
+								<div id="respond">
+				<h3 id="reply-title">Leave a Reply <small><a rel="nofollow" 
+id="cancel-comment-reply-link" 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/#respond"
+ style="display: none;">Cancel reply</a></small></h3>
+									<form action="http://tuxtweaks.com/wp-comments-post.php" 
+method="post" id="commentform">
+																			<p class="comment-notes">Your email address will not 
+be published. Required fields are marked <span class="required">*</span></p>
+							<p class="comment-form-author"><label for="author">Name</label> <span
+ class="required">*</span><input id="author" name="author" size="30" 
+aria-required="true" type="text"></p>
+<p class="comment-form-email"><label for="email">Email</label> <span 
+class="required">*</span><input id="email" name="email" size="30" 
+aria-required="true" type="text"></p>
+<p class="comment-form-url"><label for="url">Website</label><input 
+id="url" name="url" size="30" type="text"></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label><textarea
+ id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>
+						<p class="form-allowed-tags">You may use these <abbr 
+title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a
+ href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; 
+&lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del 
+datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;strike&gt; 
+&lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" id="submit" value="Post Comment" 
+type="submit">
+							<input name="comment_post_ID" value="1281" id="comment_post_ID" 
+type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+						</p>
+						<p style="display: none;"><input id="akismet_comment_nonce" 
+name="akismet_comment_nonce" value="117df664b2" type="hidden"></p><p 
+style="display: none;"><input name="nxts" value="1328254857" type="text"><input
+ name="nxts_signed" value="4432c1386fed3e998b774736cc0283eeb13bcc65" 
+type="text"><input name="74c0d5b041ae686400ac" type="text"><input 
+name="4667f0280e830f82093998ea" value="e9ecba74ffa07105207e6" 
+type="text"></p>					</form>
+							</div><!-- #respond -->
+						
+</div>
+
+	
+	</div>
+	
+        <!-- begin r_sidebar -->
+
+<div id="r_sidebar">
+
+	<ul id="r_sidebarwidgeted">
+	<li id="text-413084922" class="widget widget_text"><h2 
+class="widgettitle">Subscribe by email</h2>
+			<div class="textwidget"><form style="border: 1px solid rgb(204, 204, 
+204); padding: 3px; text-align: center;" 
+action="http://feedburner.google.com/fb/a/mailverify" method="post" 
+target="popupwindow" 
+onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=TuxTweaks',
+ 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><p>Enter
+ your email address:</p><p><input style="width: 140px;" name="email" 
+type="text"></p><input value="TuxTweaks" name="uri" type="hidden"><input
+ name="loc" value="en_US" type="hidden"><input value="Subscribe" 
+type="submit"><p>Delivered by <a href="http://feedburner.google.com/" 
+target="_blank">FeedBurner</a></p></form>
+
+<a href="http://www.twitter.com/tuxtweaks"><img 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/follow_me-c.png"
+ alt="Follow TuxTweaks on Twitter"></a></div>
+		</li>
+<li id="wppp-3" class="widget widget_wppp"><h2 class="widgettitle">Top 
+Content</h2>
+
+<ul class="wppp_list">
+	<li><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/"
+ title="Installing LAMP on Ubuntu 10.04 and 10.10 (Lucid Lynx, Maverick 
+Meerkat)">Installing LAMP on Ubuntu 10.04 and 10.10 (Lucid Lynx, 
+Maverick Meerkat)</a></li>
+	<li><a 
+href="http://tuxtweaks.com/2011/10/install-lamp-and-phpmyadmin-on-ubuntu-11-10/"
+ title="Install LAMP and phpMyAdmin on Ubuntu 11.10">Install LAMP and 
+phpMyAdmin on Ubuntu 11.10</a></li>
+	<li><a 
+href="http://tuxtweaks.com/2008/08/how-to-control-fan-speeds-in-ubuntu/"
+ title="How To Control Fan Speeds in Ubuntu">How To Control Fan Speeds 
+in Ubuntu</a></li>
+	<li><a 
+href="http://tuxtweaks.com/2009/07/how-to-configure-apache-linux/" 
+title="How to Configure Apache Web Server on Linux">How to Configure 
+Apache Web Server on Linux</a></li>
+	<li><a href="http://tuxtweaks.com/2009/08/fade-out-images-with-gimp/" 
+title="Fade Out Images with GIMP">Fade Out Images with GIMP</a></li>
+	<li><a 
+href="http://tuxtweaks.com/2010/10/remove-old-kernels-in-ubuntu-with-one-command/"
+ title="Remove Old Kernels In Ubuntu With One Command">Remove Old 
+Kernels In Ubuntu With One Command</a></li>
+	<li><a 
+href="http://tuxtweaks.com/2010/01/how-to-uninstall-lamp-in-ubuntu-9-10-karmic-koala/"
+ title="How To Uninstall LAMP in Ubuntu 9.10 Karmic Koala">How To 
+Uninstall LAMP in Ubuntu 9.10 Karmic Koala</a></li>
+	<li><a 
+href="http://tuxtweaks.com/2010/05/ubuntu-enable-rotation-nvidia/" 
+title="How To Rotate The Screen in Ubuntu With The Nvidia Driver">How To
+ Rotate The Screen in Ubuntu With The Nvidia Driver</a></li>
+	<li><a 
+href="http://tuxtweaks.com/2009/05/create-a-bootable-usb-drive-ubuntu-freedos/"
+ title="Create a Bootable USB Drive with Ubuntu and FreeDOS">Create a 
+Bootable USB Drive with Ubuntu and FreeDOS</a></li>
+	<li><a href="http://tuxtweaks.com/2010/10/remove-lamp-in-ubuntu/" 
+title="Remove LAMP in Ubuntu">Remove LAMP in Ubuntu</a></li>
+</ul>
+</li>
+<li id="categories-404091481" class="widget widget_categories"><h2 
+class="widgettitle">Categories</h2>
+<select style="visibility: visible;" name="cat" id="cat" 
+class="postform">
+	<option selected="selected" value="-1">Select Category</option>
+	<option class="level-0" value="3">bash</option>
+	<option class="level-0" value="65">command line</option>
+	<option class="level-0" value="82">Distro Review</option>
+	<option class="level-0" value="4">firefox</option>
+	<option class="level-0" value="144">FOSS</option>
+	<option class="level-0" value="5">gadget</option>
+	<option class="level-0" value="90">General</option>
+	<option class="level-0" value="6">gnome</option>
+	<option class="level-0" value="7">HowTo</option>
+	<option class="level-0" value="58">humor</option>
+	<option class="level-0" value="87">image editing</option>
+	<option class="level-0" value="121">KDE</option>
+	<option class="level-0" value="8">lame</option>
+	<option class="level-0" value="9">linux</option>
+	<option class="level-0" value="10">mp3</option>
+	<option class="level-0" value="11">news</option>
+	<option class="level-0" value="12">opinion</option>
+	<option class="level-0" value="21">review</option>
+	<option class="level-0" value="13">security</option>
+	<option class="level-0" value="14">Ubuntu</option>
+	<option class="level-0" value="161">video</option>
+	<option class="level-0" value="70">web development</option>
+	<option class="level-0" value="15">windows</option>
+</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+	var dropdown = document.getElementById("cat");
+	function onCatChange() {
+		if ( dropdown.options[dropdown.selectedIndex].value > 0 ) {
+			location.href = "http://tuxtweaks.com/?cat="+dropdown.options[dropdown.selectedIndex].value;
+		}
+	}
+	dropdown.onchange = onCatChange;
+/* ]]> */
+</script>
+
+</li>
+<li id="collapsible-archive" class="widget 
+widget_ara_collapsiblearchive">
+	<!-- Collapsible Archive Widget starts here -->
+	<script type="text/javascript">
+	//<!--
+	
+		collapsiblearchive_toggle = function(listelement, listsign)
+		{
+			var listobject = document.getElementById(listelement);
+			var sign = document.getElementById(listsign);
+			if(listobject.style.display == 'block')
+			{
+				listobject.style.display = 'none';
+				collapsiblearchive_togglesign(sign, true);
+			}
+			else
+			{
+				listobject.style.display = 'block';
+				collapsiblearchive_togglesign(sign, false);
+			}
+		}
+			collapsiblearchive_togglesign = function(element,visibility)
+		{
+			(visibility == false ? element.innerHTML = '&#9660;&nbsp;' : element.innerHTML = '&#9658;&nbsp;');
+		}
+
+	// -->
+	</script>
+	<h2 class="widgettitle">Archives</h2>
+
+
+<ul>
+	<li>				<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_mo2012','ara_ca_mosign2012')"><span
+ id="ara_ca_mosign2012">▼&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2012/">2012</a>&nbsp;(1)
+		<ul id="ara_ca_mo2012" style="display: block;">	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20121','ara_ca_posign20121')"><span
+ id="ara_ca_posign20121">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2012/01/" title="Jan">Jan</a>&nbsp;(1)</li>
+
+			<li>
+		<ul id="ara_ca_po20121" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2012/01/creating-a-terminal-window-clock/">Creating
+ A Terminal Window Clock</a></li>
+		</ul></li>
+		</ul>
+	</li>
+	<li>				<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_mo2011','ara_ca_mosign2011')"><span
+ id="ara_ca_mosign2011">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2011/">2011</a>&nbsp;(26)
+		<ul id="ara_ca_mo2011" style="display: none;">	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po201112','ara_ca_posign201112')"><span
+ id="ara_ca_posign201112">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2011/12/" title="Dec">Dec</a>&nbsp;(1)</li>
+
+			<li>
+		<ul id="ara_ca_po201112" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2011/12/batch-converting-audio-with-gstreamer/">Batch
+ Converting Audio With GStreamer</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po201111','ara_ca_posign201111')"><span
+ id="ara_ca_posign201111">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2011/11/" title="Nov">Nov</a>&nbsp;(2)</li>
+
+			<li>
+		<ul id="ara_ca_po201111" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2011/11/command-line-basics-create-and-extract-tarballs/">Command
+ Line Basics: Create And Extract Tarballs</a></li>
+			<li><a href="http://tuxtweaks.com/2011/11/server-move-complete/">Server
+ Move Complete</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po201110','ara_ca_posign201110')"><span
+ id="ara_ca_posign201110">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2011/10/" title="Oct">Oct</a>&nbsp;(3)</li>
+
+			<li>
+		<ul id="ara_ca_po201110" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2011/10/comments-temporarily-disabled/">Comments
+ Temporarily Disabled</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2011/10/install-lamp-and-phpmyadmin-on-ubuntu-11-10/">Install
+ LAMP and phpMyAdmin on Ubuntu 11.10</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2011/10/command-line-basics-finding-files/">Command
+ Line Basics: Finding Files</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20119','ara_ca_posign20119')"><span
+ id="ara_ca_posign20119">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2011/09/" title="Sep">Sep</a>&nbsp;(2)</li>
+
+			<li>
+		<ul id="ara_ca_po20119" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2011/09/remove-old-package-configuration-files-in-ubuntu/">Remove
+ Old Package Configuration Files in Ubuntu</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2011/09/view-your-linux-distro-version-from-the-command-line/">View
+ Your Linux Distro Version From The Command Line</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20118','ara_ca_posign20118')"><span
+ id="ara_ca_posign20118">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2011/08/" title="Aug">Aug</a>&nbsp;(2)</li>
+
+			<li>
+		<ul id="ara_ca_po20118" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2011/08/get-a-free-digital-issue-of-linux-journal/">Get
+ A Free Digital Issue Of Linux Journal</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2011/08/displaying-todays-date-with-php/">Displaying
+ Today's Date With PHP</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20117','ara_ca_posign20117')"><span
+ id="ara_ca_posign20117">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2011/07/" title="Jul">Jul</a>&nbsp;(2)</li>
+
+			<li>
+		<ul id="ara_ca_po20117" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2011/07/switching-my-sister-in-law-to-linux/">Switching
+ My Sister In-law To Linux</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2011/07/rename-and-rotate-digital-photos-with-jhead/">Rename
+ and Rotate Digital Photos With jhead</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20116','ara_ca_posign20116')"><span
+ id="ara_ca_posign20116">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2011/06/" title="Jun">Jun</a>&nbsp;(3)</li>
+
+			<li>
+		<ul id="ara_ca_po20116" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2011/06/command-line-basics-view-image-exif-data/">Command
+ Line Basics: View Image EXIF Data</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2011/06/command-line-basics-change-your-password/">Command
+ Line Basics: Change Your Password</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2011/06/listing-and-killing-tasks-from-the-command-prompt-in-windows/">Listing
+ And Killing Tasks From The Command Prompt In Windows</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20115','ara_ca_posign20115')"><span
+ id="ara_ca_posign20115">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2011/05/" title="May">May</a>&nbsp;(1)</li>
+
+			<li>
+		<ul id="ara_ca_po20115" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2011/05/wireless-internet-on-the-msi-wind-with-ubuntu-11-04/">Wireless
+ Internet On The MSI Wind With Ubuntu 11.04</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20114','ara_ca_posign20114')"><span
+ id="ara_ca_posign20114">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2011/04/" title="Apr">Apr</a>&nbsp;(2)</li>
+
+			<li>
+		<ul id="ara_ca_po20114" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2011/04/command-line-basics-compare-files-with-diff/">Command
+ Line Basics: Compare Files With diff</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2011/04/how-to-resample-audio-files-with-gstreamer/">How
+ To Resample Audio Files With GStreamer</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20113','ara_ca_posign20113')"><span
+ id="ara_ca_posign20113">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2011/03/" title="Mar">Mar</a>&nbsp;(3)</li>
+
+			<li>
+		<ul id="ara_ca_po20113" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2011/03/how-to-show-line-numbers-in-vim/">How
+ To Show Line Numbers In Vim</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2011/03/delete-lines-beginning-with-a-character-in-vim/">Delete
+ Lines Beginning With A Character In Vim</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2011/03/how-to-hide-secret-messages-in-images-with-linux/">How
+ To Hide Secret Messages In Images With Linux</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20112','ara_ca_posign20112')"><span
+ id="ara_ca_posign20112">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2011/02/" title="Feb">Feb</a>&nbsp;(2)</li>
+
+			<li>
+		<ul id="ara_ca_po20112" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2011/02/juice-your-music-with-clementine/">Juice
+ Your Music With Clementine</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2011/02/command-line-basics-head-and-tail/">Command
+ Line Basics: head And tail</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20111','ara_ca_posign20111')"><span
+ id="ara_ca_posign20111">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2011/01/" title="Jan">Jan</a>&nbsp;(3)</li>
+
+			<li>
+		<ul id="ara_ca_po20111" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2011/01/create-your-own-qr-codes-on-linux/">Create
+ Your Own QR Codes on Linux</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2011/01/apple-screws-iphone-customers-again/">Apple
+ Screws iPhone Customers... Again</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2011/01/adding-video-captions-with-avidemux/">Adding
+ Video Captions With Avidemux</a></li>
+		</ul></li>
+		</ul>
+	</li>
+	<li>				<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_mo2010','ara_ca_mosign2010')"><span
+ id="ara_ca_mosign2010">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2010/">2010</a>&nbsp;(60)
+		<ul id="ara_ca_mo2010" style="display: none;">	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po201012','ara_ca_posign201012')"><span
+ id="ara_ca_posign201012">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2010/12/" title="Dec">Dec</a>&nbsp;(4)</li>
+
+			<li>
+		<ul id="ara_ca_po201012" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2010/12/check-the-status-of-ubuntu-one-synchronization/">Check
+ The Status of Ubuntu One Synchronization</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/12/oracle-promoting-open-office-through-java-update/">Oracle
+ Promoting Open Office Through Java Update</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/12/converting-audio-to-mp3-with-gstreamer/">Converting
+ Audio to MP3 with GStreamer</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/12/converting-audio-files-with-gstreamer/">Converting
+ Audio Files with GStreamer</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po201011','ara_ca_posign201011')"><span
+ id="ara_ca_posign201011">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2010/11/" title="Nov">Nov</a>&nbsp;(4)</li>
+
+			<li>
+		<ul id="ara_ca_po201011" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2010/11/install-the-ubuntu-font-in-ubuntu-lucid/">Install
+ The Ubuntu Font in Ubuntu Lucid</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/11/tux-tweaks-is-back-on-line/">Tux 
+Tweaks is Back On Line</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/11/tether-your-android-phone-with-ubuntu/">Tether
+ Your Android Phone With Ubuntu</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/11/fix-the-gnome-screenshot-shortcut-in-ubuntu-10-10/">Fix
+ The GNOME Screenshot Shortcut in Ubuntu 10.10</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po201010','ara_ca_posign201010')"><span
+ id="ara_ca_posign201010">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2010/10/" title="Oct">Oct</a>&nbsp;(4)</li>
+
+			<li>
+		<ul id="ara_ca_po201010" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2010/10/cross-platform-koobface-worm-can-infect-linux/">Cross-Platform
+ Koobface Worm Can Infect Linux</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/10/dear-linux-users-kimberly-clark-doesnt-want-your-business/">Dear
+ Linux Users, Kimberly-Clark Doesn't Want Your Business</a></li>
+			<li><a href="http://tuxtweaks.com/2010/10/remove-lamp-in-ubuntu/">Remove
+ LAMP in Ubuntu</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/10/remove-old-kernels-in-ubuntu-with-one-command/">Remove
+ Old Kernels In Ubuntu With One Command</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20109','ara_ca_posign20109')"><span
+ id="ara_ca_posign20109">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2010/09/" title="Sep">Sep</a>&nbsp;(4)</li>
+
+			<li>
+		<ul id="ara_ca_po20109" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2010/09/command-line-basics-ripping-audio-cd%e2%80%99s-part-4/">Command
+ Line Basics: Ripping Audio CD’s, Part 4</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/09/command-line-basics-ripping-audio-cd%e2%80%99s-part-3/">Command
+ Line Basics: Ripping Audio CD’s, Part 3</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/09/command-line-basics-ripping-audio-cds-part-2/">Command
+ Line Basics: Ripping Audio CD's, Part 2</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/09/command-line-basics-ripping-audio-cds-part-1/">Command
+ Line Basics: Ripping Audio CD's, Part 1</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20108','ara_ca_posign20108')"><span
+ id="ara_ca_posign20108">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2010/08/" title="Aug">Aug</a>&nbsp;(3)</li>
+
+			<li>
+		<ul id="ara_ca_po20108" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2010/08/transcode-video-for-the-htc-incredible-on-linux/">Transcode
+ Video For The HTC Incredible on Linux</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/08/shorten-your-links-the-open-source-way/">Shorten
+ Your Links The Open Source Way</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/08/gnumeric-a-light-weight-spreadsheet-program/">Gnumeric:
+ A Light Weight Spreadsheet Program</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20107','ara_ca_posign20107')"><span
+ id="ara_ca_posign20107">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2010/07/" title="Jul">Jul</a>&nbsp;(6)</li>
+
+			<li>
+		<ul id="ara_ca_po20107" style="display: none;">
+			<li><a href="http://tuxtweaks.com/2010/07/new-android-phone/">New 
+Android Phone</a></li>
+			<li><a href="http://tuxtweaks.com/2010/07/html5-free-vs-proprietary/">Free
+ vs. Proprietary and HTML5</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/07/enable-the-flash-plugin-for-chromium-in-ubuntu/">Enable
+ The Flash Plugin For Chromium In Ubuntu</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/07/install-the-chromium-browser-in-ubuntu/">Install
+ The Chromium Browser in Ubuntu</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/07/how-to-reload-the-gnome-panel-menu/">How
+ To Reload The Gnome Panel Menu</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/07/keep-your-screen-awake-with-caffeine/">Keep
+ Your Screen Awake With Caffeine</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20106','ara_ca_posign20106')"><span
+ id="ara_ca_posign20106">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2010/06/" title="Jun">Jun</a>&nbsp;(4)</li>
+
+			<li>
+		<ul id="ara_ca_po20106" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2010/06/command-line-basics-create-text-files-with-tee/">Command
+ Line Basics: Create Text Files With tee</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/06/how-to-fade-the-edges-of-images-with-gimp/">How
+ To Fade The Edges Of Images With GIMP</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/06/tux-tweaks-performance-enhancements/">Tux
+ Tweaks Performance Enhancements</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/06/avast-5-0-free-antivirus-for-windows/">avast!
+ 5.0 Free Antivirus for Windows</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20105','ara_ca_posign20105')"><span
+ id="ara_ca_posign20105">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2010/05/" title="May">May</a>&nbsp;(9)</li>
+
+			<li>
+		<ul id="ara_ca_po20105" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2010/05/ubuntu-enable-rotation-nvidia/">How 
+To Rotate The Screen in Ubuntu With The Nvidia Driver</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/05/lynx-a-text-only-web-browser/">Lynx: A
+ Text Only Web Browser</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/05/midori-a-lightweight-web-browser/">Midori
+ - A Lightweight Web Browser</a></li>
+			<li><a href="http://tuxtweaks.com/2010/05/from-the-wtf-apple-dept/">From
+ The "WTF, Apple?" Dept.</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/05/theres-always-one-bad-apple/">There's
+ Always One Bad Apple</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/05/ubuntu-on-the-big-bang-theory/">Ubuntu
+ on "The Big Bang Theory"</a></li>
+			<li><a href="http://tuxtweaks.com/2010/05/gourmet-recipe-manager/">Organize
+ Your Recipes with Gourmet Recipe Manager</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/05/tuxtweaks-is-now-on-twitter/">TuxTweaks
+ is now on Twitter!</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/05/add-an-open-terminal-button-to-nautilus/">Add
+ an Open Terminal Button to Nautilus</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20104','ara_ca_posign20104')"><span
+ id="ara_ca_posign20104">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2010/04/" title="Apr">Apr</a>&nbsp;(6)</li>
+
+			<li>
+		<ul id="ara_ca_po20104" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/">Installing
+ LAMP on Ubuntu 10.04 and 10.10 (Lucid Lynx, Maverick Meerkat)</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/04/use-nautilus-location-entry-in-ubuntu-lucid/">Use
+ Nautilus Location Entry in Ubuntu Lucid</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/04/command-line-basics-view-text-with-less/">Command
+ Line Basics: View Text With less</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/04/how-to-select-your-log-in-manager-in-ubuntu/">How
+ To Select Your Log-in Manager in Ubuntu</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/04/how-to-select-the-splash-screen-in-ubuntu-lucid/">How
+ To Select The Splash Screen in Ubuntu Lucid</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/04/customizing-file-manager-menus-in-kde4/">Customizing
+ File Manager Menus in KDE4</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20103','ara_ca_posign20103')"><span
+ id="ara_ca_posign20103">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2010/03/" title="Mar">Mar</a>&nbsp;(6)</li>
+
+			<li>
+		<ul id="ara_ca_po20103" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2010/03/command-line-basics-list-hard-drives-by-uuid/">Command
+ Line Basics: List Hard Drives By UUID</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/03/access-your-web-server-from-virtualbox/">Access
+ Your Web Server From a VirtualBox Guest OS</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/03/watermark-images-with-nautilus-actions/">Watermark
+ Images With Nautilus Actions</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/03/expand-the-gnome-file-manager-with-nautilus-actions/">Expand
+ The GNOME File Manager With Nautilus Actions</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/03/ubuntu-lucid-works-on-the-msi-wind-u100/">Ubuntu
+ Lucid Works on the MSI Wind U100</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/03/centos-5-4-on-the-dell-inspiron-2600/">CentOS
+ 5.4 On The Dell Inspiron 2600</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20102','ara_ca_posign20102')"><span
+ id="ara_ca_posign20102">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2010/02/" title="Feb">Feb</a>&nbsp;(3)</li>
+
+			<li>
+		<ul id="ara_ca_po20102" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2010/02/command-line-basics-monitor-processes-with-top/">Command
+ Line Basics: Monitor Processes With Top</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/02/the-perennial-year-of-the-linux-desktop/">The
+ Perennial Year of the Linux Desktop</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/02/bash-to-basics-the-for-loop/">Bash to
+ Basics: The For Loop</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20101','ara_ca_posign20101')"><span
+ id="ara_ca_posign20101">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2010/01/" title="Jan">Jan</a>&nbsp;(7)</li>
+
+			<li>
+		<ul id="ara_ca_po20101" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2010/01/fix-google-gears-for-firefox-on-linux/">Fix
+ Google Gears for Firefox on Linux</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/01/how-to-uninstall-lamp-in-ubuntu-9-10-karmic-koala/">How
+ To Uninstall LAMP in Ubuntu 9.10 Karmic Koala</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/01/tux-tweaks-now-with-threaded-comments/">Tux
+ Tweaks - Now With Threaded Comments</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/01/command-line-basics-count-files/">Command
+ Line Basics: Count Files</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/01/how-to-create-pdfs-of-gnulinux-manpages/">How
+ To Create PDF's Of GNU/Linux Manpages</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2010/01/restart-usb-in-ubuntu-jauntykarmic/">Restart
+ USB in Ubuntu Jaunty/Karmic</a></li>
+			<li><a href="http://tuxtweaks.com/2010/01/review-rockbox/">Review: 
+RockBox</a></li>
+		</ul></li>
+		</ul>
+	</li>
+	<li>				<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_mo2009','ara_ca_mosign2009')"><span
+ id="ara_ca_mosign2009">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2009/">2009</a>&nbsp;(89)
+		<ul id="ara_ca_mo2009" style="display: none;">	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po200912','ara_ca_posign200912')"><span
+ id="ara_ca_posign200912">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2009/12/" title="Dec">Dec</a>&nbsp;(4)</li>
+
+			<li>
+		<ul id="ara_ca_po200912" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2009/12/how-to-list-the-installed-packages-on-a-debian-based-system/">How
+ To List The Installed Packages on a Debian Based System</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/12/command-line-basics-bulk-rename-files-with-rename/">Command
+ Line Basics: Bulk Rename Files With rename</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/12/command-line-basics-cut-fields-with-awk/">Command
+ Line Basics: Cut Fields With awk</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/12/remove-old-kernels-in-ubuntu/">Remove
+ Old Kernels in Ubuntu</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po200911','ara_ca_posign200911')"><span
+ id="ara_ca_posign200911">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2009/11/" title="Nov">Nov</a>&nbsp;(5)</li>
+
+			<li>
+		<ul id="ara_ca_po200911" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2009/11/use-the-chrome-os-start-page/">Use 
+The Chrome OS Start Page</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/11/how-to-install-wordpress-on-ubuntu-part-2/">How
+ To Install WordPress on Ubuntu: Part 2</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/11/how-to-install-wordpress-on-ubuntu-part-1/">How
+ To Install WordPress on Ubuntu: Part 1</a></li>
+			<li><a href="http://tuxtweaks.com/2009/11/flash-drive-frustration/">Flash
+ Drive Frustration</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/11/ubuntu-9-10-post-installation-to-do-list/">Ubuntu
+ 9.10 Post Installation To-Do List</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po200910','ara_ca_posign200910')"><span
+ id="ara_ca_posign200910">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2009/10/" title="Oct">Oct</a>&nbsp;(7)</li>
+
+			<li>
+		<ul id="ara_ca_po200910" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2009/10/install-lamp-on-ubuntu-9-10-karmic-koala/">Install
+ LAMP on Ubuntu 9.10 Karmic Koala</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/10/motorolaverizon-droid-specs-leaked/">Motorola/Verizon
+ Droid Specs Leaked</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/10/command-line-basics-join-files-with-cat/">Command
+ Line Basics: Join Files With cat</a></li>
+			<li><a href="http://tuxtweaks.com/2009/10/re-selling-vs-shaming/">Re:
+ Selling vs. Shaming</a></li>
+			<li><a href="http://tuxtweaks.com/2009/10/tuxtweaks-got-hacked/">TuxTweaks
+ Got Hacked</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/10/test-driving-google-chrome-on-linux/">Test
+ Driving Google Chrome on Linux</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/10/command-line-basics-view-text-files-with-more/">Command
+ Line Basics: View Text Files with more</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20099','ara_ca_posign20099')"><span
+ id="ara_ca_posign20099">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2009/09/" title="Sep">Sep</a>&nbsp;(6)</li>
+
+			<li>
+		<ul id="ara_ca_po20099" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2009/09/microsoft-releases-free-antivirus/">Microsoft
+ Releases Free Antivirus</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/09/three-more-reasons-not-to-use-linux/">Three
+ More Reasons Not To Use Linux</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/09/bash-to-basics-the-while-do-loop/">Bash
+ to Basics: The While Do Loop</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/09/create-a-bootable-freedos-usb-drive-on-windows/">Create
+ a Bootable FreeDOS USB Drive on Windows</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/09/command-line-basics-pipelining-output/">Command
+ Line Basics: Pipelining Output</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/09/create-a-bootable-freedos-usb-drive-on-linux-with-unetbootin/">Create
+ a Bootable FreeDOS USB Drive on Linux With UNetbootin</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20098','ara_ca_posign20098')"><span
+ id="ara_ca_posign20098">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2009/08/" title="Aug">Aug</a>&nbsp;(14)</li>
+
+			<li>
+		<ul id="ara_ca_po20098" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2009/08/enable-the-rt2860sta-linux-wireless-driver/">Enable
+ The RT2860STA Linux Wireless Driver</a></li>
+			<li><a href="http://tuxtweaks.com/2009/08/fade-out-images-with-gimp/">Fade
+ Out Images with GIMP</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/08/command-line-basics-redirecting-output/">Command
+ Line Basics: Redirecting Output</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/08/command-line-basics-view-files-with-cat/">Command
+ Line Basics: View Files With cat</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/08/command-line-basics-determine-file-mime-types/">Command
+ Line Basics: Determine File MIME Types</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/08/batch-watermark-images-in-linux/">Batch
+ Watermark Images in Linux</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/08/penguin-tweaks-outfit-gets-new-tuxedo/">Penguin
+ Tweaks Outfit, Gets New Tuxedo</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/08/howto-watermark-images-imagemagick-linux/">How
+ To Watermark Images With ImageMagick in Linux</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/08/nautilus-script-to-launch-a-terminal/">Nautilus
+ Script to Launch a Terminal</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/08/suse-studio-screenshot-tour/">SUSE 
+Studio Screenshot Tour</a></li>
+			<li><a href="http://tuxtweaks.com/2009/08/edit-gnome-configuration/">Edit
+ Your GNOME Configuration</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/08/open-source-apps-for-windows-introduce-users-to-foss/">Open
+ Source Apps for Windows to Introduce Users to FOSS</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/08/name-the-next-apple-product/">Name 
+The Next Apple Product</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/08/fast-boot-your-pc-with-xandros-presto/">Fast
+ Boot Your PC With Xandros Presto</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20097','ara_ca_posign20097')"><span
+ id="ara_ca_posign20097">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2009/07/" title="Jul">Jul</a>&nbsp;(5)</li>
+
+			<li>
+		<ul id="ara_ca_po20097" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2009/07/ubuntu-makes-it-to-primetime/">Ubuntu
+ Makes It To Primetime</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/07/how-to-add-item-gnome-menu/">How To 
+Add an Item To The GNOME Menu For All Users</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/07/how-to-configure-apache-linux/">How 
+to Configure Apache Web Server on Linux</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/07/who-or-what-else-did-hans-reiser-kill/">Who
+ or What Else Did Hans Reiser Kill?</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/07/what-os-do-you-run-on-your-netbook/">What
+ OS Do You Run On Your Netbook?</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20096','ara_ca_posign20096')"><span
+ id="ara_ca_posign20096">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2009/06/" title="Jun">Jun</a>&nbsp;(7)</li>
+
+			<li>
+		<ul id="ara_ca_po20096" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2009/06/bash-to-basics-read-user-input/">Bash
+ to Basics: Read User Input</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/06/create-text-images-with-imagemagick/">Create
+ Text Images with ImageMagick</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/06/resize-images-in-linux-with-imagemagick/">Resize
+ Images in Linux with ImageMagick</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/06/view-ogg-videos-in-firefox-35/">View 
+Ogg Videos in Firefox 3.5</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/06/bash-to-basics-bash-rocket-science/">Bash
+ to Basics: Bash Rocket Science</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/06/installing-lamp-on-ubuntu-jaunty-904/">Installing
+ LAMP on Ubuntu Jaunty (9.04)</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/06/share-folders-linux-host-linux-virtual-machine-virtualbox/">Share
+ Folders Between a Linux Host and Linux Virtual Machine on VirtualBox</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20095','ara_ca_posign20095')"><span
+ id="ara_ca_posign20095">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2009/05/" title="May">May</a>&nbsp;(11)</li>
+
+			<li>
+		<ul id="ara_ca_po20095" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2009/05/command-line-basics-create-custom-commands-with-alias/">Command
+ Line Basics: Create Custom Commands with Alias</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/05/command-line-basics-list-files-with-ls/">Command
+ Line Basics: List Files with ls</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/05/space-saving-tips-for-your-gnome-desktop/">Space
+ Saving Tips for Your GNOME Desktop</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/05/windows-web-browser-shootout/">Windows
+ Web Browser Shootout</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/05/command-line-basics-navigating-the-file-system/">Command
+ Line Basics: Navigating the File System</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/05/bash-to-basics-print-text-with-echo/">Bash
+ to Basics: Print Text with echo</a></li>
+			<li><a href="http://tuxtweaks.com/2009/05/command-line-basics-echo/">Command
+ Line Basics: echo</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/05/install-the-firefox-35-beta-in-linux/">Install
+ the Firefox 3.5 Beta in Linux</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/05/create-a-bootable-usb-drive-ubuntu-freedos/">Create
+ a Bootable USB Drive with Ubuntu and FreeDOS</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/05/revert-the-update-behavior-in-jaunty-to-the-old-way/">Revert
+ the Update Behavior in Jaunty to the Old Way</a></li>
+			<li><a href="http://tuxtweaks.com/2009/05/who-needs-windows/">Who 
+Needs Windows?</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20094','ara_ca_posign20094')"><span
+ id="ara_ca_posign20094">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2009/04/" title="Apr">Apr</a>&nbsp;(11)</li>
+
+			<li>
+		<ul id="ara_ca_po20094" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2009/04/install-picasa-30-for-linux-beta/">Install
+ Picasa 3.0 for Linux (beta)</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/04/eight-reasons-your-next-computer-should-run-linux/">Eight
+ Reasons Your Next Computer Should Run Linux</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/04/jaunty-boots-faster-on-msi-wind/">Jaunty
+ Boots 32% Faster on the MSI Wind</a></li>
+			<li><a href="http://tuxtweaks.com/2009/04/the-jackalope-is-jaunting/">The
+ Jackalope is Jaunting!</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/04/windows-7-wont-close-the-doors/">Windows
+ 7 Won't Close the Door For Linux</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/04/upgrade-ubuntu-with-a-cd-image/">Upgrade
+ Ubuntu with a CD Image</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/04/get-a-jump-on-jaunty-jackalope/">Get a
+ Jump on Jaunty Jackalope</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/04/transfer-files-in-nautilus-with-sftp/">Secure
+ File Transfer in Nautilus with SFTP</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/04/add-the-nt-backup-tool-to-windows-xp/">Add
+ the NT Backup Tool to Windows XP</a></li>
+			<li><a href="http://tuxtweaks.com/2009/04/why-i-hate-dell/">Why I 
+hate Dell</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/04/how-to-install-avg-antivirus-in-ubuntu/">How
+ To Install AVG Antivirus 7.5 in Ubuntu</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20093','ara_ca_posign20093')"><span
+ id="ara_ca_posign20093">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2009/03/" title="Mar">Mar</a>&nbsp;(13)</li>
+
+			<li>
+		<ul id="ara_ca_po20093" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2009/03/create-an-encrypted-folder-in-ubuntu-with-cryptkeeper/">Create
+ an Encrypted Folder in Ubuntu with Cryptkeeper</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/03/how-to-create-multiple-firefox-profiles-in-windows/">How
+ To Create Multiple Firefox Profiles in Windows</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/03/install-the-fedora-10-desktop-theme-in-ubuntu/">Install
+ the Fedora 10 Desktop Theme in Ubuntu</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/03/download-the-fedora-10-wallpaper/">Download
+ the Fedora 10 Wallpaper</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/03/how-to-install-the-echo-icon-theme-in-ubuntu/">How
+ To Install the Echo Icon Theme in Ubuntu</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/03/how-to-install-the-nodoka-theme-engine-in-ubuntu/">How
+ To Install the Nodoka Theme Engine in Ubuntu</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/03/create-your-own-deb-packages-with-checkinstall/">Create
+ Your Own .deb Packages with Checkinstall</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/03/install-your-own-ringtones-with-ubuntu-and-bitpim/">Install
+ Your Own Ringtones with Ubuntu and BitPim</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/03/install-multimedia-codecs-in-ubuntu-804/">Install
+ Multimedia Codecs in Ubuntu 8.04</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/03/use-linux-to-solve-the-linux-journal-scramble/">Use
+ Linux to Solve the Linux Journal Scramble</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/03/dvorak-rings-death-knell-for-microsofts-business-model/">Dvorak
+ Rings Death Knell for Microsoft's Business Model</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/03/microsoft-to-release-windows-linux/">Microsoft
+ to Release Windows Linux!</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/03/review-sabrent-68-in-1-internal-card-reader/">Review:
+ Sabrent 68 in 1 Internal Card Reader</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20092','ara_ca_posign20092')"><span
+ id="ara_ca_posign20092">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2009/02/" title="Feb">Feb</a>&nbsp;(2)</li>
+
+			<li>
+		<ul id="ara_ca_po20092" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2009/02/back-up-your-mobile-phone-contacts-with-ubuntu-and-bluetooth/">Back
+ Up Your Mobile Phone Contacts with Ubuntu and Bluetooth</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/02/microsoft-leaves-the-door-wide-open-for-linux-on-netbooks/">Microsoft
+ Leaves the Door Wide Open for Linux on Netbooks</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20091','ara_ca_posign20091')"><span
+ id="ara_ca_posign20091">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2009/01/" title="Jan">Jan</a>&nbsp;(4)</li>
+
+			<li>
+		<ul id="ara_ca_po20091" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2009/01/windows-7-hosed-my-boot-record/">Windows
+ 7 Hosed my Boot Record</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2009/01/force-usb-device-discovery-in-ubuntu/">Force
+ USB Device Discovery in Ubuntu</a></li>
+			<li><a href="http://tuxtweaks.com/2009/01/ubuntu-on-the-msi-wind/">Ubuntu
+ on the MSI Wind</a></li>
+			<li><a href="http://tuxtweaks.com/2009/01/review-msi-wind/">Review: 
+MSI Wind</a></li>
+		</ul></li>
+		</ul>
+	</li>
+	<li>				<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_mo2008','ara_ca_mosign2008')"><span
+ id="ara_ca_mosign2008">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2008/">2008</a>&nbsp;(37)
+		<ul id="ara_ca_mo2008" style="display: none;">	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po200812','ara_ca_posign200812')"><span
+ id="ara_ca_posign200812">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2008/12/" title="Dec">Dec</a>&nbsp;(8)</li>
+
+			<li>
+		<ul id="ara_ca_po200812" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2008/12/update-logitech-lx8-in-ubuntu/">Update:
+ Logitech LX8 in Ubuntu</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/12/create-a-button-to-restart-usb-in-ubuntu/">Create
+ a Button to Restart USB in Ubuntu</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/12/create-an-ubuntu-live-usb-drive/">Create
+ an Ubuntu Live USB Drive</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/12/install-fedora-cursor-theme-in-ubuntu/">Install
+ Fedora Cursor Theme in Ubuntu</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/12/change-the-week-start-day-in-ubuntu/">Change
+ the Week Start Day in Ubuntu</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/12/automatically-update-the-clamav-virus-database/">Automatically
+ Update the ClamAV Virus Database</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/12/add-on-demand-virus-scanning-to-nautilus/">Add
+ On-Demand Virus Scanning to Nautilus</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/12/put-your-own-face-on-tux-wii-fit-review/">Put
+ Your Own Face on Tux - Wii Fit Review</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po200811','ara_ca_posign200811')"><span
+ id="ara_ca_posign200811">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2008/11/" title="Nov">Nov</a>&nbsp;(6)</li>
+
+			<li>
+		<ul id="ara_ca_po200811" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2008/11/change-the-week-start-day-in-hamster-applet/">Change
+ the Week Start Day in Hamster Applet</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/11/how-to-add-a-new-hard-drive-in-ubuntu/">How
+ To Add a New Hard Drive in Ubuntu</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/11/how-to-run-gnome-panel-applets-in-xfce/">How
+ To Run Gnome Panel Applets in Xfce</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/11/how-to-install-adobe-air-on-linux/">How
+ To Install Adobe AIR on Linux</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/11/tagging-mp3-files-in-linux-with-easytag/">Tagging
+ mp3 Files in Linux with EasyTAG</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/11/keep-track-of-your-time-with-hamster-applet/">Keep
+ Track of Your Time with Hamster Applet</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po200810','ara_ca_posign200810')"><span
+ id="ara_ca_posign200810">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2008/10/" title="Oct">Oct</a>&nbsp;(8)</li>
+
+			<li>
+		<ul id="ara_ca_po200810" style="display: none;">
+			<li><a href="http://tuxtweaks.com/2008/10/ubuntu-810-is-out/">Ubuntu 
+8.10 is Out!</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/10/split-mp3-files-with-mp3splt/">Split 
+mp3 Files With mp3splt</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/10/how-to-install-realplayer-11-in-ubuntu/">How
+ To Install RealPlayer 11 in Ubuntu</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/10/how-to-install-free42-in-ubuntu/">How
+ To Install Free42 in Ubuntu</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/10/review-sony-mdr-nc6-noise-canceling-headphones/">Review
+ - Sony MDR-NC6 Noise Canceling Headphones</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/10/how-to-set-up-a-home-network-with-ubuntu-part-3/">How
+ To Set Up a Home Network With Ubuntu, Part 3</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/10/how-to-set-up-a-home-network-with-ubuntu-part-2/">How
+ To Set Up a Home Network With Ubuntu, Part 2</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/10/how-to-set-up-a-home-network-with-ubuntu-part-1/">How
+ To Set Up a Home Network With Ubuntu, Part 1</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20089','ara_ca_posign20089')"><span
+ id="ara_ca_posign20089">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2008/09/" title="Sep">Sep</a>&nbsp;(6)</li>
+
+			<li>
+		<ul id="ara_ca_po20089" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2008/09/how-to-create-multiple-firefox-profiles/">How
+ To Create Multiple Firefox Profiles</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/09/ubuntu-video-configuration-on-a-dell-inspiron-2600/">Ubuntu
+ Video Configuration on a Dell Inspiron 2600</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/09/how-to-install-avast-in-ubuntu/">How 
+To Install Avast! in Ubuntu</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/09/review-hp-2207-22-flat-panel-monitor/">Review:
+ HP 2207 22" Flat Panel Monitor</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/09/how-to-south-paw-logitech-lx8-in-linux/">How
+ To: South Paw Logitech LX8 in Linux</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/09/10-ways-googles-chrome-browser-changes-the-web/">10
+ Ways Google's Chrome Browser Changes the Web</a></li>
+		</ul></li>	
+			<li>					<a style="cursor: pointer;" 
+onclick="collapsiblearchive_toggle('ara_ca_po20088','ara_ca_posign20088')"><span
+ id="ara_ca_posign20088">►&nbsp;</span></a><a 
+href="http://tuxtweaks.com/2008/08/" title="Aug">Aug</a>&nbsp;(9)</li>
+
+			<li>
+		<ul id="ara_ca_po20088" style="display: none;">
+			<li><a 
+href="http://tuxtweaks.com/2008/08/how-to-control-fan-speeds-in-ubuntu/">How
+ To Control Fan Speeds in Ubuntu</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/08/how-to-install-avast-antivirus-in-windows-xp/">How
+ To Install avast! Antivirus in Windows XP</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/08/how-to-launch-a-program-in-ubuntu-without-using-the-menu/">How
+ to Launch a Program in Ubuntu Without Using The Menu</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/08/review-logitech-lx8-in-windows-xp/">Review
+ - Logitech LX8 in Windows XP</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/08/google-starts-free-the-airwaves-pr-campaign/">Google
+ Starts "Free The Airwaves" PR Campaign</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/08/review-logitech-lx8-cordless-laser-mouse/">Review
+ - Logitech LX8 Cordless Laser Mouse</a></li>
+			<li><a href="http://tuxtweaks.com/2008/08/subway-doesnt-like-linux/">Subway
+ Doesn't Like Linux!</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/08/how-to-add-an-item-to-ubuntus-menu/">How
+ To Add An Item To Ubuntu's Menu</a></li>
+			<li><a 
+href="http://tuxtweaks.com/2008/08/how-to-resample-mp3-audio-files-on-linux-using-lame/">How
+ to resample MP3 audio files on Linux using LAME</a></li>
+		</ul></li>
+		</ul>
+	</li>
+</ul></li>
+
+	<!-- Collapsible Archive Widget ends here -->
+	<!-- Time taken for the Collapsible Archive Widget plugin to complete loading is 0.172 seconds -->
+<li id="linkcat-74" class="widget widget_links"><h2 class="widgettitle">Favorite
+ Sites</h2>
+
+	<ul class="xoxo blogroll">
+<li><a href="http://ithacapres.org/" title="First Presbyterian Church – 
+Ithaca, MI">Ithaca Presbyterian Church</a></li>
+<li><a href="http://tuxmachines.org/">Tux Machines</a></li>
+<li><a href="http://ubuntuforums.org/" title="The official Ubuntu user 
+forums">Ubuntu Forums</a></li>
+
+	</ul>
+</li>
+
+	</ul>
+			
+</div>
+
+<!-- end r_sidebar -->
+</div>
+
+<!-- The main column ends  -->
+
+<!-- begin footer -->
+
+<div style="clear: both;"></div>
+
+</div>
+
+<div id="footerbg">
+
+	<div id="footer">
+	
+		<div class="footerleft">
+		<p>Copyright © 2009 - 2011· <a href="http://tuxtweaks.com/">Tux 
+Tweaks.</a></p>
+		</div>
+		
+		<div class="footerright">
+			<p><a href="http://wordpress.com/">Get a Blog</a> · <a 
+href="http://wordpress.org/">WordPress</a> · <a 
+href="http://tuxtweaks.com/wp-login.php">Log in</a> </p>
+		</div>
+		
+	</div>
+	
+</div>
+
+<script type="text/javascript" src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/jquery_002.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/tuxtweaks.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ...","cached":"1"};;
+var _wpcf7 = {"loaderUrl":"http:\/\/tuxtweaks.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ...","cached":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/scripts.js"></script>
+
+	<script src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/e-201205.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	st_go({v:'ext',j:'1:1.2.2',blog:'8821983',post:'1281'});
+	var load_cmc = function(){linktracker_init(8821983,1281,2);};
+	if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+	else load_cmc();
+	</script><img id="wpstats" 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/g.gif"
+ alt="">
+<style type="text/css">img#wpstats{display:none}</style>
+   <!-- Start Google Analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5579814-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+   <!-- End Google Analytics -->
+
+<!-- Dynamic page generated in 0.442 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2012-02-03 02:40:57 -->
+<!-- super cache --><div style="width: 1008px; height: 10008px; opacity:
+ 0.8; display: none;" id="stimuli_overlay"></div><div style="top: 
+2448.3px; left: 0px; display: none;" id="stimuli_lightbox"><div 
+style="width: 415px; height: 245px; font-size: 22.7752px;" 
+id="stimuli_outerImageContainer"><div id="stimuli_imageContainer"><img 
+src="Installing%20LAMP%20on%20Ubuntu%2010.04%20and%2010.10%20%28Lucid%20Lynx,%20Maverick%20Meerkat%29%20%7C%20Tux%20Tweaks_files/08_lamp_wm.png"
+ style="width: 395px; height: 225px;" id="stimuli_lightboxImage"><div 
+style="" id="stimuli_hoverNav"><a style="height: 225px;" href="#" 
+id="stimuli_prevLink"></a><a style="height: 225px;" href="#" 
+id="stimuli_nextLink"></a></div><div style="display: none;" 
+id="stimuli_loading"><a href="#" id="stimuli_loadingLink"></a></div></div></div><div
+ style="width: 415px;" id="stimuli_imageDataContainer"><div style="" 
+id="stimuli_imageData"><div id="stimuli_imageDetails"><span 
+id="stimuli_caption">phpMyAdmin Setup: select apache2</span><span 
+style="" id="stimuli_numberDisplay">Image 7 of 14</span></div><div 
+id="stimuli_bottomNav"><a href="#" id="stimuli_bottomNavClose"></a></div></div></div></div></body></html>

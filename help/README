@@ -1,0 +1,9 @@
+Quick instructions for running the code.
+
+Examples:
+
+To get help:
+perl buildPdbInteractionTables_serial.pl --help
+
+To run using standard options in options file:
+perl buildPdbInteractionTables_serial.pl --file buildPdbInteractionTables_options>buildPdbInteractionTables_serial.cmdout

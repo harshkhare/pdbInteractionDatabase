@@ -1,0 +1,47 @@
+#!usr/bin/perl
+
+$pdbInDir = ".";
+
+opendir(PDBINDIR,$pdbInDir)||die"Can not open PDBINDIR.\n";
+
+chomp $ARGV[0];
+
+foreach $file(grep{/\.pdb$/}readdir(PDBINDIR))
+{
+
+###REMOVE LINES WITH 'USER' TAG.
+	@lines = ();
+	open(IN,"$pdbInDir/$file")||print "Can not open IN.\n";
+	foreach $line (<IN>)
+	{
+		if($line!~m/^USER  /){push @lines,$line;}
+	}
+	close(IN);
+	open(OUT,">$pdbInDir/$file")||print "Can not open OUT.\n";
+	print OUT @lines;
+	close(OUT);
+
+###REMOVE OLD HYDROGENS
+	if($ARGV[0] eq "update_hydrogens")
+	{
+		print `echo \$PID_MOLPROBITY_PATH`."/reduce -Trim -DB \$PID_MOLPROBITY_LIB_PATH/reduce_wwPDB_het_dict.txt $pdbInDir/$file";
+		$reduceOut = `\$PID_MOLPROBITY_PATH/reduce -Trim -DB \$PID_MOLPROBITY_LIB_PATH/reduce_wwPDB_het_dict.txt $pdbInDir/$file`;
+		print "\n";
+
+		open(REM,">$file")||die "Can not open TEMP for writing.\n";
+		print REM $reduceOut;
+		close(REM);
+	}
+
+#=head
+###ADD NEW HYDROGENS
+	print `echo \$PID_MOLPROBITY_PATH`."/reduce -DB /home/harsh/localInstallations/kinemage/molprobity3/lib/reduce_wwPDB_het_dict.txt $pdbInDir/$file";
+	$reduceOut = `\$PID_MOLPROBITY_PATH/reduce -DB /home/harsh/localInstallations/kinemage/molprobity3/lib/reduce_wwPDB_het_dict.txt $pdbInDir/$file`;
+	print "\n";
+
+	open(RED,">$file")||die "Can not open TEMP for writing.\n";
+	print RED $reduceOut;
+	close(RED);
+#=cut
+
+}

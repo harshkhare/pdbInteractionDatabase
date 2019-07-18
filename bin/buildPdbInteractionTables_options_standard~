@@ -1,0 +1,19 @@
+--overwrite
+--datadir ../data/input/exampleData
+--outputdir ../data/output/exampleData
+#--skip_generate_rawdata
+#--skip_build_tables
+#--skip_build_insert_queries
+#--skip_populate_database
+--add_hydrogens
+--update_hydrogens
+--datadir_template
+--recreate_tables_file recreateTables.sql
+--create_tables_file 
+--database_name exampleData
+--write_database overwrite
+--database_write_log
+--mysql_host localhost
+--mysql_uname root
+--mysql_passwd mysql
+
